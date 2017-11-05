@@ -10,14 +10,52 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BasicNumpy.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BasicNumpy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/BasicNumpy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="247">
+              <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#571#648#0" expanded="false" />
+                <element signature="e#718#789#0" expanded="false" />
+                <element signature="e#899#1014#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PltHist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandGenDistribution.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetworkEX.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/NetworkEX.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+              <folding>
+                <element signature="e#105#123#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -29,6 +67,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
+        <option value="Jupyter Notebook" />
         <option value="Python Script" />
       </list>
     </option>
@@ -44,12 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/123.py" />
-        <option value="$PROJECT_DIR$/context.txt" />
-        <option value="$PROJECT_DIR$/HW1.py" />
-        <option value="$PROJECT_DIR$/HW2.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/有關python3與網路的交流.py" />
         <option value="$PROJECT_DIR$/threadIssue.py" />
         <option value="$PROJECT_DIR$/testForDictionary.py" />
         <option value="$PROJECT_DIR$/test2.py" />
@@ -94,15 +127,21 @@
         <option value="$PROJECT_DIR$/TestCode/test_example.py" />
         <option value="$PROJECT_DIR$/BasicLangLearning/OperatingMatrix.py" />
         <option value="$PROJECT_DIR$/coursera_dp_learning/numpy_used/Basic_numpy.py" />
+        <option value="$PROJECT_DIR$/testBook.ipynb" />
+        <option value="$PROJECT_DIR$/JupyterNoteBook/Numpy.ipynb" />
+        <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py" />
+        <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/NetworkEX.py" />
         <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/BasicNumpy.py" />
+        <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/NumpyRandomUniform.py" />
+        <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2029" />
-    <option name="y" value="374" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -120,42 +159,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="PythonLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="PythonLearning-DataStructureLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonLearning-DataStructureLearning" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PythonLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="PythonLearning-DataStructureLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonLearning-DataStructureLearning" type="462c0819:PsiDirectoryNode" />
               <item name="coursera_dp_learning" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PythonLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="網路文章[補充]" type="462c0819:PsiDirectoryNode" />
+              <item name="PythonLearning-DataStructureLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonLearning-DataStructureLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="coursera_dp_learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic_numpy" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../smoke-controller-script.git" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\GitHub\PythonLearning-DataStructureLearning\JupyterNoteBook" />
       <recent name="F:\PycharmProjects\PythonLearning\DataStructure\Link" />
       <recent name="F:\PycharmProjects\PythonLearning\DataStructure\Sort" />
       <recent name="F:\PycharmProjects\PythonLearning\網路文章[補充]" />
       <recent name="F:\PycharmProjects\PythonLearning\BasicLangLearning" />
-      <recent name="F:\PycharmProjects\PythonLearning" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -170,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.BasicNumpy">
+  <component name="RunManager" selected="Python.PltHist">
     <configuration name="BasicNumpy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,19 +228,19 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Lambda_EX" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="NetworkEX" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BasicLangLearning" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonLearning" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BasicLangLearning/Lambda_EX.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/NetworkEX.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -222,19 +262,52 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Python_OO_class" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="PltHist" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BasicLangLearning" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonLearning" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BasicLangLearning/Python_OO_class.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="PythonLearning" type="Python.Ipnb" factoryName="Jupyter Notebook">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonLearning" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+    </configuration>
+    <configuration name="RandGenDistribution" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonLearning" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -344,55 +417,39 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration name="diskfailure" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="code (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/StatisticProblem" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonLearning" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/StatisticProblem/diskfailure.py" />
+      <option name="SCRIPT_NAME" value="/code.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="mathplotlib" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BasicLangLearning" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonLearning" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BasicLangLearning/mathplotlib.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.Overfitting_EX" />
-      <item index="1" class="java.lang.String" itemvalue="Python.diskfailure" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mathplotlib" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Python_OO_class" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Lambda_EX" />
-      <item index="5" class="java.lang.String" itemvalue="Python.BasicNumpy" />
+      <item index="1" class="java.lang.String" itemvalue="Jupyter Notebook.PythonLearning" />
+      <item index="2" class="java.lang.String" itemvalue="Python.BasicNumpy" />
+      <item index="3" class="java.lang.String" itemvalue="Python.code (2)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.RandGenDistribution" />
+      <item index="5" class="java.lang.String" itemvalue="Python.NetworkEX" />
+      <item index="6" class="java.lang.String" itemvalue="Python.PltHist" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.BasicNumpy" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Lambda_EX" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Python_OO_class" />
-        <item index="3" class="java.lang.String" itemvalue="Python.mathplotlib" />
-        <item index="4" class="java.lang.String" itemvalue="Python.diskfailure" />
+        <item index="0" class="java.lang.String" itemvalue="Python.PltHist" />
+        <item index="1" class="java.lang.String" itemvalue="Python.BasicNumpy" />
+        <item index="2" class="java.lang.String" itemvalue="Python.NetworkEX" />
+        <item index="3" class="java.lang.String" itemvalue="Python.RandGenDistribution" />
+        <item index="4" class="java.lang.String" itemvalue="Python.code (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -451,19 +508,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="168" width="1456" height="876" extended-state="6" />
+    <frame x="1912" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24283667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20200573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34021738" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26224157" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28281462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38140163" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42587602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38971582" sideWeight="0.49573562" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2635575" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26116374" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879657" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -509,22 +566,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Model.csv" />
-    <entry file="file://$PROJECT_DIR$/../randomForest/Prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../post_test/test.py" />
-    <entry file="file://$PROJECT_DIR$/../post_test/language_database.py" />
-    <entry file="file://$PROJECT_DIR$/../untitled2/test.py" />
     <entry file="file://$PROJECT_DIR$/../untitled2/testCode.py" />
     <entry file="file://$PROJECT_DIR$/../untitled2/testMergeCSV.py" />
     <entry file="file://$PROJECT_DIR$/BasicLangLearning/Python3_request_package.py">
@@ -649,21 +695,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/702880216/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="800" column="8" lean-forward="false" selection-start-line="800" selection-start-column="8" selection-end-line="800" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/702880216/builtins.py" />
     <entry file="file://$PROJECT_DIR$/BasicLangLearning/IntroToDataStructures.py" />
-    <entry file="file://$PROJECT_DIR$/../smoke-controller-script.git/add_disk_to_vm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../smoke-controller-script.git/add_disk_to_vm.py" />
     <entry file="file://$PROJECT_DIR$/StatisticProblem/KP_estimator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -780,12 +814,46 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/coursera_dp_learning/numpy_used/Basic_numpy.py" />
+    <entry file="file://$PROJECT_DIR$/testBook.ipynb" />
+    <entry file="file://$PROJECT_DIR$/JupyterNoteBook/Numpy.ipynb" />
     <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/BasicNumpy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="247">
+          <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#571#648#0" expanded="false" />
+            <element signature="e#718#789#0" expanded="false" />
+            <element signature="e#899#1014#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/NetworkEX.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding>
+            <element signature="e#105#123#0" expanded="true" />
           </folding>
         </state>
       </provider>
