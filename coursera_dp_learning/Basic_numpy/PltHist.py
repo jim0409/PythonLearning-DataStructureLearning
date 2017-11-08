@@ -11,7 +11,7 @@ x = mu + sigma * np.random.randn(10000)
 
 num_bins = 50
 # the histogram of the data
-# n : sample size ; bins (group):
+# n : sample size ; bins (group); normed(normalized) = None(default) ; alpha(opacity)
 n, bins, patches = plt.hist(x, num_bins, normed=1, facecolor='blue', alpha=0.5)
 # add a 'best fit' line
 y = mlab.normpdf(bins, mu, sigma)
