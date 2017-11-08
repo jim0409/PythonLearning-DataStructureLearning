@@ -16,12 +16,20 @@ def checkDist(sampleVector):
     plt.show()
     return 0
 
+# def scatterPlot()
+
+
+
+
 # generate men height and weight with sex_term 1
 menHeight = np.random.normal(175,5,100)
+menWeight = np.random.normal(65,0.5,100)
+# checkDist(menHeight)
+# print(menHeight.mean())
 
-
-checkDist(menHeight)
-print(menHeight.mean())
+# scatter plot
+plt.scatter(menHeight,menWeight)
+plt.show()
 
 # generate women height and weight with sex_term 0
 
