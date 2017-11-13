@@ -27,11 +27,11 @@ def sigmoidDerivative(x_vector):
 
 # Generate a random vector
 # x_vector = np.array([1, 2, 3])
-x_vector = np.random.uniform(-1,0,100)
+x_vector = np.random.uniform(-1,1,1000)
 print(x_vector)
 
-count, bins, ignored = plt.hist(x_vector,15,normed=True)
-plt.plot(x_vector,np.ones_like(x_vector),linewidth=2,color='r')
+count, bins, ignored = plt.hist(x_vector,20,normed=True)
+plt.plot(x_vector,np.ones_like(x_vector),linewidth=1,color='r')
 plt.show()
 
 # print out value sigmoid : valueSigmoid(x_vector[0])

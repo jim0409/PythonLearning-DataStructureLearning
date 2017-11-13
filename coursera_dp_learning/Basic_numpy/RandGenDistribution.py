@@ -1,11 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
+# logistic would be rewrite with numpy
+from sklearn.linear_model import LogisticRegression
 
 # purpose : use inverse cdf to get a pair data for women and men height, weight
 # then use logistic reg to figure a parameter. Also, try with deep learning
 
-# how to generate random normal would refer to np.random.normal
-
+# check scatter plot
+def scatterPlot():
+    plt.scatter(menHeight,menWeight,color="b")
+    plt.scatter(womenHeight,womenWeight,color="r")
+    plt.show()
+    return 0
+# logistic Regression
+def trainLogisticRegression(trainX,trainY):
+    logitReg=LogisticRegression()
+    logitReg.fit(trainX,trainY)
+    return logitReg
+# check Distribution with histogram
 def checkDist(sampleVector):
     plt.hist(sampleVector,20,normed=1, facecolor='blue', alpha=0.5)
     mu = sampleVector.mean().round(2)
@@ -15,27 +27,40 @@ def checkDist(sampleVector):
     plt.title('Histogram of Dist: $\mu=' + str(mu) + '$, $\sigma=' + str(std) + '$')
     plt.show()
     return 0
-
-# def scatterPlot()
-
-
-
+# apply with np lib to extend vector logit fun
+def npSigmoid(x):
+    s = 1/(1+np.exp(-x))
+    return s
+    # print("Sigmoid(x) is ",(s))
+# by inference use formula instead of scipy.mic.derivative to return ds
+def sigmoidDerivative(x_vector):
+    s = 1/(1+np.exp(-x_vector))
+    ds = s*(1-s)
+    # return ds
+    print("sigmoid_derivative(x_vector) = " + str(ds))
 
 # generate men height and weight with sex_term 1
 menHeight = np.random.normal(175,5,100)
 menWeight = np.random.normal(65,0.5,100)
-# checkDist(menHeight)
-# print(menHeight.mean())
 
-# scatter plot
-plt.scatter(menHeight,menWeight)
-plt.show()
+# generate men height and weight with sex_term 0
+womenHeight = np.random.normal(160,5,100)
+womenWeight = np.random.normal(50,0.5,100)
 
-# generate women height and weight with sex_term 0
+# generate x_vector
+x_vector=[]
+for index in range(0,len(menWeight)):
+    x_vector.append([menWeight[index],menHeight[index]])
 
+for index in range(0, len(menWeight)):
+    x_vector.append([womenWeight[index],womenHeight[index]])
 
+y_true = np.hstack([np.ones(100),np.zeros(100)])
 
+logistReg=LogisticRegression()
+logistReg.fit(x_vector,y_true)
 
+print('coef = ', logistReg.coef_ , ' intercept = ',logistReg.intercept_)
 
-
-
+# e.g. a person with height 175 and weight 65 has the probability of men would be
+print(npSigmoid(65*logistReg.coef_[0,0]+175*logistReg.coef_[0,1]+logistReg.intercept_[0]))
