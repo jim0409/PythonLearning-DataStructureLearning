@@ -30,8 +30,8 @@ def checkDist(sampleVector):
 # apply with np lib to extend vector logit fun
 def npSigmoid(x):
     s = 1/(1+np.exp(-x))
-    # return s
-    print("Sigmoid(x) is "+ str(s))
+    return s
+    # print("Sigmoid(x) is ",(s))
 # by inference use formula instead of scipy.mic.derivative to return ds
 def sigmoidDerivative(x_vector):
     s = 1/(1+np.exp(-x_vector))
@@ -48,9 +48,11 @@ womenHeight = np.random.normal(160,5,100)
 womenWeight = np.random.normal(50,0.5,100)
 
 # generate x_vector
-x_vector = np.array([np.hstack([menWeight,womenWeight]),np.hstack([menHeight,womenHeight])])
-y_true = np.hstack([np.ones(50),np.zeros(50)])
+x_vector=[]
+for index in range(0,len(menWeight)):
+    x_vector.append([menWeight[index],menHeight[index]])
 
+<<<<<<< HEAD
 print(x_vector)
 print(x_vector[0,0])
 
@@ -69,3 +71,17 @@ print(x_vector.tolist()[0][0])
 # logistReg.fit(x_test,y_true)
 # print('coef',logistReg.coef_)
 # print('intercept',logistReg.intercept_)
+=======
+for index in range(0, len(menWeight)):
+    x_vector.append([womenWeight[index],womenHeight[index]])
+
+y_true = np.hstack([np.ones(100),np.zeros(100)])
+
+logistReg=LogisticRegression()
+logistReg.fit(x_vector,y_true)
+
+print('coef = ', logistReg.coef_ , ' intercept = ',logistReg.intercept_)
+
+# e.g. a person with height 175 and weight 65 has the probability of men would be
+print(npSigmoid(65*logistReg.coef_[0,0]+175*logistReg.coef_[0,1]+logistReg.intercept_[0]))
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
