@@ -51,10 +51,21 @@ womenWeight = np.random.normal(50,0.5,100)
 x_vector = np.array([np.hstack([menWeight,womenWeight]),np.hstack([menHeight,womenHeight])])
 y_true = np.hstack([np.ones(50),np.zeros(50)])
 
-x_test = np.array([[x] for x in menHeight.tolist()])
+print(x_vector)
+print(x_vector[0,0])
+
+print(x_vector.tolist())
+print(x_vector.tolist()[0][0])
+
+
+# print(x_vector[0,0],x_vector[1,0])
+
+# x_test = np.array([[x] for x in x_vector.tolist()])
+# print(x_test)
 # x_test = np.array([x] for x in menHeight)
 
-test=LogisticRegression()
-test.fit(x_test,y_true)
-checkDist()
-
+# Test with logistic Regression
+# logistReg = LogisticRegression()
+# logistReg.fit(x_test,y_true)
+# print('coef',logistReg.coef_)
+# print('intercept',logistReg.intercept_)
