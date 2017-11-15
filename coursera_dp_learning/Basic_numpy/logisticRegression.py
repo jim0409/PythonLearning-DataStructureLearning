@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 
 # purpose : use inverse cdf to get a pair data for women and men height, weight
-# then use logistic reg to figure a parameter. Also, try with deep learning
+# then use logistic reg to figure a parameter.
 
 # check scatter plot
 def scatterPlot():
@@ -31,13 +31,11 @@ def checkDist(sampleVector):
 def npSigmoid(x):
     s = 1/(1+np.exp(-x))
     return s
-    # print("Sigmoid(x) is ",(s))
 # by inference use formula instead of scipy.mic.derivative to return ds
 def sigmoidDerivative(x_vector):
     s = 1/(1+np.exp(-x_vector))
     ds = s*(1-s)
-    # return ds
-    print("sigmoid_derivative(x_vector) = " + str(ds))
+    return ds
 
 # generate men height and weight with sex_term 1
 menHeight = np.random.normal(175,5,100)
