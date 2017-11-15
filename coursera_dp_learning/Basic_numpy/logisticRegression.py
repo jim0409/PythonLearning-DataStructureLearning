@@ -50,6 +50,18 @@ x_vector=[]
 for index in range(0,len(menWeight)):
     x_vector.append([menWeight[index],menHeight[index]])
 
+
+# print(x_vector[0,0],x_vector[1,0])
+
+# x_test = np.array([[x] for x in x_vector.tolist()])
+# print(x_test)
+# x_test = np.array([x] for x in menHeight)
+
+# Test with logistic Regression
+# logistReg = LogisticRegression()
+# logistReg.fit(x_test,y_true)
+# print('coef',logistReg.coef_)
+# print('intercept',logistReg.intercept_)
 for index in range(0, len(menWeight)):
     x_vector.append([womenWeight[index],womenHeight[index]])
 
@@ -61,4 +73,5 @@ logistReg.fit(x_vector,y_true)
 print('coef = ', logistReg.coef_ , ' intercept = ',logistReg.intercept_)
 
 # e.g. a person with height 175 and weight 65 has the probability of men would be
-print(npSigmoid(65*logistReg.coef_[0,0]+175*logistReg.coef_[0,1]+logistReg.intercept_[0]))
+print(npSigmoid(65*logistReg.coef_[0][0]+175*logistReg.coef_[0][1]+logistReg.intercept_[0]))
+

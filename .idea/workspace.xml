@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="f7393246-5181-4f24-9b3f-ca57272fce4e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
     <list default="true" id="2bf697e3-ae7e-4090-9a9b-b66294975bac" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/functionPlot.py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py" afterPath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/logisticRegression.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/BasicNumpy.py" afterPath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/BasicNumpy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py" afterPath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py" />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py" afterPath="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py" />
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,6 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="logisticRegression.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/logisticRegression.py">
@@ -42,6 +54,29 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
               <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+=======
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+      <file leaf-file-name="BasicNumpy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/BasicNumpy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+              <folding>
+                <element signature="e#571#648#0" expanded="false" />
+                <element signature="e#718#789#0" expanded="false" />
+                <element signature="e#899#1014#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PltHist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -49,8 +84,53 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RandGenDistribution.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+=======
+      <file leaf-file-name="RandGenDistribution.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+=======
+    <leaf>
+      <file leaf-file-name="RandGenDistribution.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="NetworkEX.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/NetworkEX.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <folding>
+                <element signature="e#105#123#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+=======
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
     </leaf>
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -58,24 +138,63 @@
       </list>
     </option>
   </component>
+=======
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+=======
+    </leaf>
+  </component>
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/LossFunction.py" />
         <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/functionPlot.py" />
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py" />
+=======
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
         <option value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py" />
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="467" />
+    <option name="y" value="29" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+=======
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+=======
+  <component name="ProjectFrameBounds" fullScreen="true">
+<<<<<<< HEAD
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+=======
+    <option name="x" value="1440" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -92,13 +211,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+      <pane id="Scratches" />
+=======
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="PythonLearning-DataStructureLearning" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonLearning-DataStructureLearning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonLearning-DataStructureLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonLearning-DataStructureLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="BasicLangLearning" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonLearning-DataStructureLearning" type="b2602c69:ProjectViewProjectNode" />
@@ -111,15 +246,35 @@
               <item name="coursera_dp_learning" type="462c0819:PsiDirectoryNode" />
               <item name="Basic_numpy" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PythonLearning-DataStructureLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonLearning-DataStructureLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="coursera_dp_learning" type="462c0819:PsiDirectoryNode" />
+              <item name="CNN_test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       <pane id="Scratches" />
+<<<<<<< HEAD
+=======
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+      <pane id="Scope" />
+=======
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -133,8 +288,14 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.functionPlot">
     <configuration name="LossFunction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+  <component name="RunManager" selected="Python.RandGenDistribution">
+<<<<<<< HEAD
+    <configuration name="PltHist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -146,11 +307,20 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonLearning-DataStructureLearning" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/lossFunction.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py" />
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
     <configuration name="RandGenDistribution" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -168,23 +338,37 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="functionPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+<<<<<<< HEAD
+    <configuration name="numPy_GenRandomNorm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BasicLangLearning" />
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonLearning-DataStructureLearning" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/functionPlot.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BasicLangLearning/numPy_GenRandomNorm.py" />
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+<<<<<<< HEAD
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.RandGenDistribution" />
       <item index="1" class="java.lang.String" itemvalue="Python.LossFunction" />
@@ -195,6 +379,42 @@
         <item index="0" class="java.lang.String" itemvalue="Python.functionPlot" />
         <item index="1" class="java.lang.String" itemvalue="Python.RandGenDistribution" />
         <item index="2" class="java.lang.String" itemvalue="Python.LossFunction" />
+=======
+    <configuration name="survivalAnalysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/StatisticProblem" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonLearning-DataStructureLearning" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/StatisticProblem/survivalAnalysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python.survivalAnalysis" />
+      <item index="1" class="java.lang.String" itemvalue="Python.RandGenDistribution" />
+      <item index="2" class="java.lang.String" itemvalue="Python.numPy_GenRandomNorm" />
+      <item index="3" class="java.lang.String" itemvalue="Python.PltHist" />
+    </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.RandGenDistribution" />
+        <item index="1" class="java.lang.String" itemvalue="Python.numPy_GenRandomNorm" />
+        <item index="2" class="java.lang.String" itemvalue="Python.PltHist" />
+        <item index="3" class="java.lang.String" itemvalue="Python.survivalAnalysis" />
+=======
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.RandGenDistribution" />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
       </list>
     </recent_temporary>
   </component>
@@ -203,11 +423,19 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="f7393246-5181-4f24-9b3f-ca57272fce4e" name="Default" comment="" />
+      <created>1510051509211</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1510051509211</updated>
+=======
       <changelist id="2bf697e3-ae7e-4090-9a9b-b66294975bac" name="Default" comment="" />
       <created>1510574904282</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510574904282</updated>
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
     </task>
     <servers />
   </component>
@@ -221,8 +449,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+=======
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
     <editor active="true" />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19027181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -232,6 +469,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -241,6 +479,44 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+=======
+<<<<<<< HEAD
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26116374" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879657" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31438935" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -252,6 +528,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/logisticRegression.py">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/RandGenDistribution.py">
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/logisticRegression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -262,16 +554,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/logisticRegression.py">
+=======
+    <entry file="file://$PROJECT_DIR$/StatisticProblem/survivalAnalysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicLangLearning/mathplotlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicLangLearning/Python3_request_package.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicLangLearning/PythonList_Dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicLangLearning/separate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicLangLearning/SklearnExampleTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/PltHist.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="247">
+          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding>
+            <element signature="e#571#648#0" expanded="false" />
+            <element signature="e#718#789#0" expanded="false" />
+            <element signature="e#899#1014#0" expanded="false" />
+          </folding>
+=======
+        <state relative-caret-position="120">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicLangLearning/numPy_GenRandomNorm.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="285">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+=======
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+=======
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
     <entry file="file://$PROJECT_DIR$/BasicLangLearning/context.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -284,6 +647,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
           <folding />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
         </state>
       </provider>
     </entry>
@@ -299,13 +663,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/logisticRegression.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="351">
           <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="190">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+=======
+        <state relative-caret-position="388">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+=======
+        <state relative-caret-position="553">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
+>>>>>>> 5e87907f8b4aaa1bd6d40d618b57b61316a3dc74
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/coursera_dp_learning/Basic_numpy/NetworkEX.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="e#105#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 6bd3d0d63c5c7af6fe3bc60287a8920c5fa62e03
+=======
+>>>>>>> 95f1887e0aa50f5f2aa5a94ea30e2d0f277c863a
   </component>
 </project>
