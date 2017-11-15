@@ -1,10 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-# logistic would be rewrite with numpy
 from sklearn.linear_model import LogisticRegression
 
-# purpose : use inverse cdf to get a pair data for women and men height, weight
-# then use logistic reg to figure a parameter.
 
 # check scatter plot
 def scatterPlot():
@@ -12,11 +9,13 @@ def scatterPlot():
     plt.scatter(womenHeight,womenWeight,color="r")
     plt.show()
     return 0
+
 # logistic Regression
 def trainLogisticRegression(trainX,trainY):
     logitReg=LogisticRegression()
     logitReg.fit(trainX,trainY)
     return logitReg
+
 # check Distribution with histogram
 def checkDist(sampleVector):
     plt.hist(sampleVector,20,normed=1, facecolor='blue', alpha=0.5)
@@ -27,10 +26,12 @@ def checkDist(sampleVector):
     plt.title('Histogram of Dist: $\mu=' + str(mu) + '$, $\sigma=' + str(std) + '$')
     plt.show()
     return 0
+
 # apply with np lib to extend vector logit fun
 def npSigmoid(x):
     s = 1/(1+np.exp(-x))
     return s
+
 # by inference use formula instead of scipy.mic.derivative to return ds
 def sigmoidDerivative(x_vector):
     s = 1/(1+np.exp(-x_vector))
@@ -50,18 +51,6 @@ x_vector=[]
 for index in range(0,len(menWeight)):
     x_vector.append([menWeight[index],menHeight[index]])
 
-
-# print(x_vector[0,0],x_vector[1,0])
-
-# x_test = np.array([[x] for x in x_vector.tolist()])
-# print(x_test)
-# x_test = np.array([x] for x in menHeight)
-
-# Test with logistic Regression
-# logistReg = LogisticRegression()
-# logistReg.fit(x_test,y_true)
-# print('coef',logistReg.coef_)
-# print('intercept',logistReg.intercept_)
 for index in range(0, len(menWeight)):
     x_vector.append([womenWeight[index],womenHeight[index]])
 
