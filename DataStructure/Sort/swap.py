@@ -1,5 +1,5 @@
 #define the swap function
-class swap:
+class swapClass:
     def __init__(self,value1,value2):
         self.__value1 = value1
         self.__value2 = value2
