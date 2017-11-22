@@ -1,26 +1,36 @@
 import numpy as np
+import matplotlib.pyplot as plt
 import lifelines
 
 class dataInfo():
-    def __init__(self, censor_rate=0, par_coef_time_dep=0, par_var_time_dep=0, beta=0, landa=0 ):
+    def __init__(self, sample_size, censor_rate=0, intercept=0, slope=0, beta=0, landa=0 , cov_type="linear"):
+        self.sample_size = sample_size
         self.censor_rate = censor_rate
-        self.par_coef_time_dep = par_coef_time_dep
-        self.par_var_time_dep = par_var_time_dep
+        self.intercept = intercept
+        self.slope = slope
         self.beta = beta
         self.landa = landa
 
-def inversecdf(intercet, slope, beta, landa, data):
+    def genTimeData(self):
+        surv_T = np.random.exponential(scale=self.landa, size=self.sample_size)
+        return surv_T
+
+    def genEventData(self):
+        event_T = np.random.exponential(scale=self.landa, size=self.sample_size)
+        return event_T
+
+
+def inversecdf(intercet, slope, beta, landa, data, cov_type="linear" ,error_term=False):
     simulate_data = np.log( 1 + slope * beta * np.array(data) * np.exp( -intercet * beta ) / landa )/( slope * beta)
     return simulate_data
 
 
 if __name__ == '__main__':
 
-    newData = dataInfo(censor_rate=1, par_coef_time_dep=1, par_var_time_dep=1, beta=1, landa=1)
+    newData = dataInfo(sample_size=1000, censor_rate=1, intercept=1, slope=1, beta=1, landa=1)
     data = [1, 2, 3, 4, 5]
 
-    result = inversecdf(intercet=1, slope=1, beta=newData.beta, landa=newData.landa , data=data)
+    result = inversecdf(intercet=newData.intercept, slope=newData.slope, beta=newData.beta, landa=newData.landa , data=data)
 
-    print(newData.landa)
-
-    print(result)
+    plt.hist(newData.genTimeData(), normed=1, facecolor="green", alpha=0.5)
+    plt.show()
