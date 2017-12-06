@@ -1,3 +1,11 @@
+# step 1. build a rexp to simulate life
+# step 2. formula in statistical model to transform it to particular life model
+# step 3. recheck model fit with cox model
+
+# step 4. create time dependent covariates variable for its' particular life
+# step 5. separate it as statistical method
+# step 6. notice with some statistical theory as refer
+
 import numpy as np
 import matplotlib.pyplot as plt
 import lifelines
