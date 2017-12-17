@@ -21,7 +21,12 @@ pd.set_option('display.notebook_repr_html', True)
 sns.set(style='darkgrid')
 cmap_clrbld = ['#777777','#E69F00','#56B4E9','#D3C511'
                ,'#009E73','#8D42F0','#0072B2','#D55E00','#CC79A7']
+
+# https://matplotlib.org/users/dflt_style_changes.html
+# change the default style as cmap_clrbld
 plt.rcParams['axes.color_cycle'] = cmap_clrbld
+# https://stackoverflow.com/questions/332289/how-do-you-change-the-size-of-figures-drawn-with-matplotlib
+# change plt size
 plt.rcParams['figure.figsize'] = 10, 6
 
 np.random.seed(0)
