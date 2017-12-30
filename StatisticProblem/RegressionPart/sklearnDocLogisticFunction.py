@@ -20,20 +20,31 @@ y = (X > 0).astype(np.float)
 X[X > 0] *= 4
 X += .3 * np.random.normal(size=n_samples)
 
+# 利用numpy的newaxis轉變矩陣的形狀 http://ben-do.github.io/2016/09/15/change-shape-of-matrix-by-numpy/
 X = X[:, np.newaxis]
+
 # run the classifier
+# C : the inverse of regularization strength; must be a positive float.
+#     Like in support vector machines, smaller value specify stronger regularization
+# http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
 clf = linear_model.LogisticRegression(C=1e5)
 clf.fit(X, y)
 
 # and plot the result
 plt.figure(1, figsize=(4, 3))
+
+# plt.clf() clears the entire current figure = clear figure
+# https://codeday.me/bug/20170309/5150.html
 plt.clf()
 plt.scatter(X.ravel(), y, color='black', zorder=20)
+
+# 等分數字-5~10 成300個數字 https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.linspace.html
 X_test = np.linspace(-5, 10, 300)
 
 
 def model(x):
     return 1 / (1 + np.exp(-x))
+# 將值拷貝出來給loss
 loss = model(X_test * clf.coef_ + clf.intercept_).ravel()
 plt.plot(X_test, loss, color='red', linewidth=3)
 
