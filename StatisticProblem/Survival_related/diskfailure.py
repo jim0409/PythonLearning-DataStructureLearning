@@ -3,7 +3,7 @@ import lifelines
 import matplotlib.pylab as plt
 from lifelines import KaplanMeierFitter
 
-data = pd.read_table('../csv-folder/data1.csv',sep=',')
+data = pd.read_table('/home/ubuntu/Desktop/backblaze/2017-01-01.csv',sep=',')
 T = data['smart_9_raw']
 E = data['failure']
 

@@ -26,7 +26,7 @@ class MySeriesHelper(SeriesHelper):
 
         # The series name must be a string. Add dependent fields/tags
         # in curly brackets.
-        series_name = 'SeriesHelperDB'
+        series_name = 'mea_1'
 
         # Defines all the fields in this time series.
         fields = ['some_stat', 'other_stat']
