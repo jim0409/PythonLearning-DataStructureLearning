@@ -7,4 +7,3 @@ import matplotlib.pyplot as plt
 randomSurvivalTime = np.random.exponential(scale=1)
 
 print(randomSurvivalTime)
-

@@ -1,25 +1,27 @@
 import numpy as np
 import scipy.stats as stats
 import matplotlib.pyplot as plt
+import StatisticProblem.StatisticalInference.probabilityDistGen.myplotsetting as myplt
 
 
-def mypltSetting(xLabelName='',xFontsize=10,yLabelName='',yFontsize=10,titleName='no title'):
-    plt.title(titleName)
-    plt.xlabel(xLabelName,fontsize=xFontsize)
-    plt.ylabel(yLabelName,fontsize=yFontsize)
+# def mypltSetting(xLabelName='', xFontsize=10, yLabelName='', yFontsize=10, titleName='no title'):
+#     plt.title(titleName)
+#     plt.xlabel(xLabelName, fontsize=xFontsize)
+#     plt.ylabel(yLabelName, fontsize=yFontsize)
 
 
 n = 10
 p = 0.3
-k = np.arange(0,21)
-binomial = stats.binom.pmf(k,n,p)
+k = np.arange(0, 21)
+binomial = stats.binom.pmf(k, n, p)
 print(binomial)
 
-plt.plot(k,binomial,'o-')
+plt.plot(k, binomial, 'o-')
 
-titleName='Binomial: n =%i, p=%2f'%(n,p)
+titleName = 'Binomial: n =%i, p=%2f' % (n, p)
 
-mypltSetting(xLabelName='Number of success', xFontsize=15, yLabelName='Probability of success', yFontsize=15, titleName=titleName)
+myplt.mypltSetting(xLabelName='Number of success', xFontsize=15, yLabelName='Probability of success', yFontsize=15,
+             titleName=titleName)
 
 plt.show()
 

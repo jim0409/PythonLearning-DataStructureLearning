@@ -2,12 +2,12 @@ import numpy as np
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 
-rate =2
-n = np.arange(0,10)
-y = stats.poisson.pmf(n,rate)
+rate = 2
+n = np.arange(0, 10)
+y = stats.poisson.pmf(n, rate)
 print(y)
 
-plt.plot(n,y)
+plt.plot(n, y)
 plt.show()
 
 # # 使用rvs作圖
