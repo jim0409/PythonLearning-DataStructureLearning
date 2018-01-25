@@ -9,12 +9,9 @@ x = np.arange(-5, 5, 0.1)
 
 y = stats.norm.pdf(x, 0, 1)
 
+# note : $\mu$ is symbol of mean
 
-# def mypltSetting(xLabelName='', xFontsize=10, yLabelName='', yFontsize=10, titleName='no title'):
-
-
-myplt.mypltSetting()
+myplt.mypltSetting(xLabelName='x', yLabelName='Probability', titleName='Normal: $\mu$=%.1f, $\sigma^2$=%.1f' % (mu, sigma))
 
 plt.plot(x, y)
 plt.show()
-
