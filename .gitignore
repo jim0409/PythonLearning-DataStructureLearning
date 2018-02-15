@@ -2,4 +2,4 @@
 
 #ignore folder
 venv
-./home/ubuntu/PythonLearning-DataStructureLearning/StatisticProblem/TimeSeries/*
+/StatisticProblem/TimeSeries/*
