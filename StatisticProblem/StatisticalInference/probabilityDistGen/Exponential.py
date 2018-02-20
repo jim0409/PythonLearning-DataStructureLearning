@@ -11,3 +11,7 @@ plt.plot(x, y)
 myplt.mypltSetting(titleName='Exponential: $\lambda$ =%.2f' % lambd, xLabelName='x', yLabelName='Probability density')
 
 plt.show()
+
+
+# https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.exponential.html
+# np.random.exponential(1/landa ,sampleSzie)

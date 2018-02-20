@@ -38,3 +38,8 @@ kmf.fit(T[ix], E[ix], label='miR-137')
 kmf.plot(ax=ax)
 
 plt.show()
+
+# 除了可以用kp-estimator也可以使用nelson-aa做配適。(H(x)=-ln(S(x)))
+# from lifelines import NelsonAalenFitter
+# naf = NelsonAalenFitter()
+# naf.fit(T, event_observed=E)
