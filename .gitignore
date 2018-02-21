@@ -3,3 +3,4 @@
 #ignore folder
 venv
 /StatisticProblem/TimeSeries/*
+.idea/*
