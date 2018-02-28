@@ -5,6 +5,8 @@ from lifelines import KaplanMeierFitter
 data = load_dd()
 
 # checking proportional hazards assumption
+# https://www.stat.ubc.ca/~rollin/teach/643w04/lec/node69.html
+
 # if the curves are parallel (and hence do not cross each other),
 # then it's likely the variable satisfies the assumption.
 # if the curves do cross, likely you'll have to "stratify" the variable
@@ -27,3 +29,4 @@ kmf1.plot_loglogs(ax=axes)
 axes.legend(['Non-democracy', 'Democracy'])
 
 plt.show()
+

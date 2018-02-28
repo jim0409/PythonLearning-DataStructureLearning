@@ -1,3 +1,6 @@
+# Quickstart
+# http://lifelines.readthedocs.io/en/latest/Quickstart.html#installation
+
 from lifelines.utils import datetimes_to_durations
 from lifelines.utils import survival_table_from_events
 
