@@ -1,13 +1,11 @@
+import numpy as np
 import tensorflow as tf
 
-a = tf.constant(10, name='a')
-b = tf.constant(20, name='b')
+# convert 1 dimension to tensor
+tensor_1d = np.array([1, 2, 3, 4, 2.3])
+tf_tensor = tf.convert_to_tensor(tensor_1d, dtype=tf.float64)
 
-y = tf.Variable(a + b * 2, name='y')
-
-model = tf.initialize_all_variables()
-
-with tf.Session() as session:
-    merged = tf.merge_v2_checkpoints()
-    writer = tf.train.SummarySaverHook()
-
+with tf.Session() as sess:
+    print(sess.run(tf_tensor))
+    print(sess.run(tf_tensor[0]))
+    print(sess.run(tf_tensor[1]))
