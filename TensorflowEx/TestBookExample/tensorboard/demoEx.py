@@ -1,7 +1,7 @@
 # 1. execute program
 # 2. go to /tmp/tensorflow/mnist
 # 3. run$ tensorboard --logdir=logs
-# rmk logdir could be a path
+# rmk logdir could be a path /tmp/tensorflow/mnist/logs
 
 # Copyright 2015 The TensorFlow Authors. All Rights Reserved.
 #
