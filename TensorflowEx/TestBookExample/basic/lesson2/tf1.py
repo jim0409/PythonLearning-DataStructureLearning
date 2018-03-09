@@ -1,13 +1,13 @@
 import tensorflow as tf
 
 # create a constant operation
-m1 = tf.constant([[3,3]])
+m1 = tf.constant([[3, 3]])
 
 # create a constant operation
-m2 = tf.constant([[2],[3]])
+m2 = tf.constant([[2], [3]])
 
 # create an multiplier operation and put m1,m2
-product =  tf.matmul(m1,m2)
+product = tf.matmul(m1, m2)
 print((product))
 
 # define a Session to start up
