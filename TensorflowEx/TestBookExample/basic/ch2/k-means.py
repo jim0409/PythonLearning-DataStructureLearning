@@ -1,7 +1,5 @@
 import numpy as np
-import tensorflow as tf
 import matplotlib.pyplot as plt
-import pandas as pd
 
 num_vectors = 1000
 num_clusters = 4
@@ -18,9 +16,6 @@ for i in range(num_vectors):
     else:
         x_values.append(np.random.normal(0.6, 0.4))
         y_values.append(np.random.normal(0.8, 0.5))
-
-# vector_values = zip(x_values,y_values)
-# vectors = tf.constant(vector_values)
 
 plt.plot(x_values, y_values, 'o', label='Input Data')
 plt.legend()
