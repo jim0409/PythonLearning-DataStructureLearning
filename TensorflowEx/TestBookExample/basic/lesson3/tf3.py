@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
 # read data set
-mnist = input_data.read_data_sets("MNIST_data", one_hot=True)
+mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
 
 # set size for each batch
 batch_size = 100
