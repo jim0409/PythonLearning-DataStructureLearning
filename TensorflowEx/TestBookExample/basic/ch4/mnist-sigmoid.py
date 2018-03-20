@@ -58,17 +58,18 @@ with tf.Session() as sess:
         avg_set.append(avg_cost)
         epoch_set.append(epoch + 1)
 
-print("Training phase finished!")
+    print("Training phase finished!")
 
-plt.plot(epoch_set, avg_set, 'o', label='Logistic Regression Training phase')
-plt.ylabel('cost')
-plt.xlabel('epoch')
-plt.legend()
-plt.show()
+    # Test Model
+    correct_prediction = tf.equal(tf.argmax(activation, 1), tf.argmax(y, 1))
+    # Calculate accuracy
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+    test_acc = sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})
+    print("Model Accuracy:",test_acc)
 
-# Test Model
-# correct_prediction = tf.equal(tf.argmax(activation, 1), tf.argmax(y, 1))
+    plt.plot(epoch_set, avg_set, 'o', label='Logistic Regression Training phase')
+    plt.ylabel('cost')
+    plt.xlabel('epoch')
+    plt.legend()
+    plt.show()
 
-# Calculate accuracy
-# accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-# print("Model Accuragy:", accuracy({x: mnist.test.images, y: mnist.test.labels})))

@@ -63,7 +63,7 @@ avg_set = []
 epoch_set = []
 
 # initial variable
-init = tf.initialize_all_variables()
+init = tf.global_variables_initializer()
 
 # 啟動圖形
 with tf.Session() as sess:
@@ -83,18 +83,21 @@ with tf.Session() as sess:
             epoch_set.append(epoch + 1)
     print("Training phase finished")
 
-# 輸出訓練階段模型
-plt.plot(epoch_set, avg_set, 'o', label='MLP Training phase')
-plt.ylabel('cost')
-plt.xlabel('epoch')
-plt.legend()
-plt.show()
+    # 最後測試MLP模型
+    correct_prediction = tf.equal(tf.argmax(output_layer, 1), tf.argmax(y, 1))
+    # 計算期準確性
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+    test_acc =sess.run(accuracy,feed_dict={x:mnist.test.images,y:mnist.test.labels})
+    print("Model Accuracy:", test_acc)
 
-# 最後測試MLP模型
-correct_prediction = tf.equal(tf.argmax(output_layer, 1),tf.argmax(y, 1))
-# 計算期準確性
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-# print("Model Accuracy:", tf.Session().run(accuracy))
+    # 輸出訓練階段模型
+    plt.plot(epoch_set, avg_set, 'o', label='MLP Training phase')
+    plt.ylabel('cost')
+    plt.xlabel('epoch')
+    plt.legend()
+    plt.show()
+
+
 
 # tf.cast用法
 # tf.eval用法
