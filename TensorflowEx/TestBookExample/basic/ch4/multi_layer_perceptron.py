@@ -12,7 +12,7 @@ mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
 learning_rate = 0.001
 
 # 訓練代數
-training_epochs = 2
+training_epochs = 20
 
 # 設定要分類的圖像數量
 batch_size = 100
@@ -54,7 +54,7 @@ output_layer = tf.matmul(layer_2, output) + bias_output
 # 定義cost function
 # tensorflow函數中tf.nn.softmax_cross_entropy_with_logits是計算softmax層的成本
 # 他只會在訓練期間使用。logits是輸出模型的非標準化對數機率(在應用softmax標準化之前所輸出的值)
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(labels=output_layer, logits=y))
+cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=output_layer, labels=y))
 
 optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 
@@ -79,8 +79,12 @@ with tf.Session() as sess:
             sess.run(optimizer, feed_dict={x: batch_xs, y: batch_ys})
             # 計算平均損失
             avg_cost += sess.run(cost, feed_dict={x: batch_xs, y: batch_ys}) / total_batch
+        # 紀錄epoch_set以及avg_set後繪圖
+        if epoch % display_step ==0:
+            print("Epoch:",'%04d'%(epoch+1),"cost=","{:.9f}".format(avg_cost))
             avg_set.append(avg_cost)
             epoch_set.append(epoch + 1)
+
     print("Training phase finished")
 
     # 最後測試MLP模型
