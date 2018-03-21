@@ -46,6 +46,9 @@ prediction = tf.nn.softmax(tf.matmul(L3_drop, W4) + b4)
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(labels=y, logits=prediction))
 
 # use gradient descent method
+# Optimizer can be AdamOptimizer or others
+# e.g.
+# train_step = tf.train.AdamOptimizer(1e-2).minimize(loss)
 train_step = tf.train.GradientDescentOptimizer(0.2).minimize(loss)
 
 # initial global variable
