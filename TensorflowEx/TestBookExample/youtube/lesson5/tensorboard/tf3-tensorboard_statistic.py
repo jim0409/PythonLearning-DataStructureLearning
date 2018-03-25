@@ -74,7 +74,7 @@ merged = tf.summary.merge_all()
 with tf.Session() as sess:
     sess.run(init)
     # '/path' could be assign free
-    writer = tf.summary.FileWriter('./logs/tf3', sess.graph)
+    writer = tf.summary.FileWriter('./logs/tf3/logs', sess.graph)
     # out cycle with 21 iterator
     for epoch in range(21):
         # inner cycle to calculate for n_batch times
