@@ -74,7 +74,7 @@ merged = tf.summary.merge_all()
 with tf.Session() as sess:
     sess.run(init)
     # '/path' could be assign free
-    writer = tf.summary.FileWriter('/home/ubuntu/tensorboard/logs', sess.graph)
+    writer = tf.summary.FileWriter('./logs/tf3', sess.graph)
     # out cycle with 21 iterator
     for epoch in range(21):
         # inner cycle to calculate for n_batch times
@@ -83,7 +83,6 @@ with tf.Session() as sess:
             # execute both merged and train_step
             summary, _ = sess.run([merged, train_step], feed_dict={x: batch_xs, y: batch_ys})
 
-            # record both summary and our epochs
             writer.add_summary(summary, epoch)
         acc = sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})
         print("iter " + str(epoch) + " ,Testing Accuracy " + str(acc))

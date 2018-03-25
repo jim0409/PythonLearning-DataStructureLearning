@@ -4,3 +4,4 @@
 venv
 /StatisticProblem/TimeSeries/*
 .idea/*
+/TensorflowEx/TestBookExample/youtube/lesson5/tensorboard/logs/*

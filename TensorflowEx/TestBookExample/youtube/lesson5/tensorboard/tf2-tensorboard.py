@@ -52,7 +52,7 @@ with tf.name_scope('accuracy'):
 with tf.Session() as sess:
     sess.run(init)
     # '/path' could be assign free
-    writer = tf.summary.FileWriter('/home/ubuntu/tensorboard/logs', sess.graph)
+    writer = tf.summary.FileWriter('./logs/tf2', sess.graph)
     # out cycle with 21 iterator
     for epoch in range(1):
         # inner cycle to calculate for n_batch times
