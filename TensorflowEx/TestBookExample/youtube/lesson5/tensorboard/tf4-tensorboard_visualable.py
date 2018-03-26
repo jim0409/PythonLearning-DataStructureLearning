@@ -89,9 +89,9 @@ with tf.name_scope('accuracy'):
         tf.summary.scalar('accuracy', accuracy)
 
 # generate Meta Data
-if tf.gfile.Exists(DIR + 'projector/projector/metadata.csv'):
-    tf.gfile.DeleteRecursively(DIR + 'projector/projector/metadata.csv')
-with open(DIR + 'projector/projector/metadata.csv', 'w') as f:
+if tf.gfile.Exists(DIR + 'projector/metadata.tsv'):
+    tf.gfile.DeleteRecursively(DIR + 'projector/metadata.tsv')
+with open(DIR + 'projector/metadata.tsv', 'w') as f:
     # argmax: find maximum in an array, would tag with 1 instead other values would be 0
     labels = sess.run(tf.argmax(mnist.test.labels[:], 1))
     for i in range(image_num):
@@ -100,12 +100,12 @@ with open(DIR + 'projector/projector/metadata.csv', 'w') as f:
 # merge all summary
 merged = tf.summary.merge_all()
 
-projector_writer = tf.summary.FileWriter(DIR + 'projector/projector/metadata.csv', sess.graph)
+projector_writer = tf.summary.FileWriter(DIR + 'projector/metadata.tsv', sess.graph)
 saver = tf.train.Saver()
 config = projector.ProjectorConfig()
 embed = config.embeddings.add()
 embed.tensor_name = embedding.name
-embed.metadata_path = DIR + 'projector/projector/metadata.csv'
+embed.metadata_path = DIR + 'projector/metadata.tsv'
 embed.sprite.image_path = DIR + 'projector/data/mnist_10k_sprite.png'
 embed.sprite.single_image_dim.extend([28, 28])
 projector.visualize_embeddings(projector_writer, config)
