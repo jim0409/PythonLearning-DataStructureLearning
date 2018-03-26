@@ -143,20 +143,21 @@ with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     train_writer = tf.summary.FileWriter('logs/train', sess.graph)
     test_writer = tf.summary.FileWriter('logs/test', sess.graph)
-    # 訓練模型
-    for i in range(21):
+    for i in range(1001):
+        # 訓練模型
         batch_xs, batch_ys = mnist.train.next_batch(batch_size)
         sess.run(train_step, feed_dict={x: batch_xs, y: batch_ys, keep_prob: 0.5})
+
         # 紀錄訓練集計算的參數
         summary = sess.run(merged, feed_dict={x: batch_xs, y: batch_ys, keep_prob: 1.0})
         train_writer.add_summary(summary, i)
+
         # 紀錄測試集計算的參數
         batch_xs, batch_ys = mnist.test.next_batch(batch_size)
         summary = sess.run(merged, feed_dict={x: batch_xs, y: batch_ys, keep_prob: 1.0})
-        # sess.run(train_step, feed_dict={x: batch_xs, y: batch_ys, keep_prob: 0.7})
         test_writer.add_summary(summary, i)
 
-    if i % 10 == 0:
+    if i % 100 == 0:
         test_acc = sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels, keep_prob: 1.0})
         train_acc = sess.run(accuracy,
                              feed_dict={x: mnist.train.images[:10000], y: mnist.train.labels[:10000], keep_prob: 1.0})
