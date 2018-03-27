@@ -31,6 +31,30 @@ def RNN(X, weights, biases):
     # lstm_cell = tf.contrib.rnn.BasicLSTMCell(lstm_size)
     lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(lstm_size)
 
+    # def __init__(self, num_units, forget_bias=1.0,
+    #              state_is_tuple=True, activation=None, reuse=None, name=None):
+    #     """Initialize the basic LSTM cell.
+    #
+    #     Args:
+    #       num_units: int, The number of units in the LSTM cell.
+    #       forget_bias: float, The bias added to forget gates (see above).
+    #         Must set to `0.0` manually when restoring from CudnnLSTM-trained
+    #         checkpoints.
+    #       state_is_tuple: If True, accepted and returned states are 2-tuples of
+    #         the `c_state` and `m_state`.  If False, they are concatenated
+    #         along the column axis.  The latter behavior will soon be deprecated.
+    #       activation: Activation function of the inner states.  Default: `tanh`.
+    #       reuse: (optional) Python boolean describing whether to reuse variables
+    #         in an existing scope.  If not `True`, and the existing scope already has
+    #         the given variables, an error is raised.
+    #       name: String, the name of the layer. Layers with the same name will
+    #         share weights, but to avoid mistakes we require reuse=True in such
+    #         cases.
+    #
+    #       When restoring from CudnnLSTM-trained checkpoints, must use
+    #       `CudnnCompatibleLSTMCell` instead.
+    #     """
+
     # final_state[0]是cell_state
     # final_state[1]是hidden_state
     outputs, final_state = tf.nn.dynamic_rnn(lstm_cell, inputs, dtype=tf.float32)
