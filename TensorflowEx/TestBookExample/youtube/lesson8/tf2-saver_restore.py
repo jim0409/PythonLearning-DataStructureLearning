@@ -38,7 +38,7 @@ saver = tf.train.Saver()
 
 with tf.Session() as sess:
     sess.run(init)
-    print(sess.run(accuracy,feed_dict={x:mnist.test.images,y:mnist.test.labels}))
+    print(sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels}))
     # restore model which has been trained before
-    saver.restore(sess,'/tmp/saver/my_net.ckpt')
-    print(sess.run(accuracy,feed_dict={x:mnist.test.images,y:mnist.test.labels}))
+    saver.restore(sess, '/tmp/saver/my_net.ckpt')
+    print(sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels}))
