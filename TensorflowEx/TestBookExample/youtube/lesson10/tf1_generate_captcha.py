@@ -25,6 +25,7 @@ def random_captcha_text(char_set=number, captcha_size=4):
 
 # 生成字符對應的驗證碼
 def gen_captcha_text_and_image():
+    # 預設是產生160*60的圖片
     image = ImageCaptcha()
     # 獲得隨機生成的驗證碼
     captcha_text = random_captcha_text()
@@ -35,8 +36,8 @@ def gen_captcha_text_and_image():
     image.write(captcha_text, './captcha/' + captcha_text + '.jpg')  # 寫到文件
 
 
-# 數量可能會少於10，因為重名
-num = 10
+# 數量可能會少於10000，因為重名
+num = 10000
 if __name__ == '__main__':
     for i in range(num):
         gen_captcha_text_and_image()
