@@ -4,7 +4,7 @@
 import _thread
 import time
 
-def Threadfun(string, sleeptime, *args):
+def Threadfun(string, sleeptime):
     while(True):
         print ('{0}_{1}\n'.format(string, sleeptime))
         time.sleep(sleeptime)
