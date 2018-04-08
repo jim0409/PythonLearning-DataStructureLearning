@@ -5,3 +5,5 @@ venv
 /StatisticProblem/TimeSeries/*
 .idea/*
 /TensorflowEx/TestBookExample/youtube/lesson5/tensorboard/logs/*
+/TensorflowEx/TestBookExample/youtube/lesson10/captcha/*
+/TensorflowEx/TestBookExample/youtube/lesson10/tf2-captcha-result/*
