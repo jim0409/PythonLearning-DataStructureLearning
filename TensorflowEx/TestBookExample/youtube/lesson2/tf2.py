@@ -34,10 +34,10 @@ init = tf.global_variables_initializer()
 
 with tf.Session() as sess:
     sess.run(init)
-    print(sess.run(state))
+    # print(sess.run(state))
     for _ in range(5):
         sess.run(state)
         sess.run(state2)
-        print(sess.run(update2))
         print("----")
+        print(sess.run(update2))
         print(sess.run(update))
