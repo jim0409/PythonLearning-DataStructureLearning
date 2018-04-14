@@ -9,9 +9,7 @@ import configparser
 import argparse
 import logging
 from datetime import datetime
-# import StatisticProblem.project.simulation.gen.rand_dist.linear as LinearModel
-from StatisticProblem.project.simulation.gen.rand_dist.linear import LinearSimulation
-# from StatisticProblem.project.simulation.db.influxdb.db_writer.influxdb_writer import DBwriter
+from project.simulation.gen.rand_dist.linear import LinearSimulation
 
 sample_config = """
 [FitModel]
@@ -62,5 +60,5 @@ else:
                     logging.info(
                         "with parameter slope %0.3f and intercept %0.3f" % (slope,intercept))
                     linear_fit_model = LinearSimulation(time=current_time, a=slope, b=intercept)
-                    # linear_fit_model.estimator_ai()
-                    # linear_fit_model.writedb()
+                    linear_fit_model.estimator_ai()
+                    linear_fit_model.writedb()

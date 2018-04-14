@@ -1,7 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from StatisticProblem.project.simulation.db.influxdb.db_writer.influxdb_writer import DBwriter
-
+from project.simulation.db.influxdb.db_writer.influxdb_writer import DBwriter
 from datetime import datetime
 # current_time = datetime(2018, 4, 15)
 # #

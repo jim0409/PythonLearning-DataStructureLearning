@@ -3,7 +3,6 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
-import StatisticProblem.project.SURVIVAL.db.influxdb.db_writer.influxdb_writer as db_writer
 
 
 # use numpy to generate random exponential and feed it into placeholder
