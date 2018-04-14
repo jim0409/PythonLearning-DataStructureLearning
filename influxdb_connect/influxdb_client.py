@@ -6,7 +6,7 @@ import argparse
 from influxdb import InfluxDBClient
 
 
-def main(host=' localhost', port=8086):
+def DBWriter(host=' localhost', port=8086):
     """Instantiate a connection to the InfluxDB."""
     user = 'root'
     password = 'root'
@@ -71,4 +71,4 @@ def parse_args():
 
 if __name__ == '__main__':
     args = parse_args()
-    main(host=args.host, port=args.port)
+    DBWriter(host=args.host, port=args.port)
