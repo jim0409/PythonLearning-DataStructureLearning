@@ -3,10 +3,11 @@ from influxdb import InfluxDBClient
 
 
 class DBwriter:
-    def __init__(self, time, float_value, int_value):
+    def __init__(self, time, ai_value, stat_value, true_value):
         self.__time = time
-        self.__float_value = float_value
-        self.__int_value = int_value
+        self.__ai_value = ai_value
+        self.__stat_value = stat_value
+        self.__true_value = true_value
 
     def write(self):
         self.__time = self.strftime()
@@ -34,8 +35,9 @@ class DBwriter:
 
                 "time": self.__time,
                 "fields": {
-                    "Float_value": self.__float_value,
-                    "Int_value": self.__int_value,
+                    "ai_value": self.__ai_value,
+                    "stat_value": self.__stat_value,
+                    "true_value": self.__true_value,
                 }
             }
         ]
@@ -48,15 +50,17 @@ class DBwriter:
         logging.info("Write points: {0}".format(json_body))
         client.write_points(json_body)
 
-# # from datetime import datetime
-# # below datetime declaration are available
-# # current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-# # current_time = datetime.utcnow()
-# # current_time = datetime.now()
+
+# from datetime import datetime
+#
+# # # below datetime declaration are available
+# # # current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+# # # current_time = datetime.utcnow()
+# # # current_time = datetime.now()
 # current_time = datetime(2018, 4, 3)
 #
 # # current_time = strftime(current_time)
 # print(current_time)
 #
-# a = DBwriter(time=current_time, float_value=0.81, int_value=4)
+# a = DBwriter(time=current_time, ai_value=0.81, stat_value=0.82, true_value = 1.)
 # a.write()
