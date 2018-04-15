@@ -150,10 +150,12 @@ def main():
 
 
 if __name__ == '__main__':
-    current_time = datetime(2018, 4, 15)
-
     slope, intercept = main()
-    linearModel = LinearSimulation(time=current_time, a=slope, b=intercept)
-    aiValue, statValue = linearModel.estimator_ai()
-    dbwriter = DBwriter(time=current_time, ai_value=aiValue, stat_value=statValue, true_value=slope)
-    dbwriter.write()
+
+    # control wirte days
+    for i in range(1,15):
+        current_time = datetime(2018, 4, i)
+        linearModel = LinearSimulation(time=current_time, a=slope, b=intercept)
+        aiValue, statValue = linearModel.estimator_ai()
+        dbwriter = DBwriter(time=current_time, ai_value=aiValue, stat_value=statValue, true_value=intercept)
+        dbwriter.write()
