@@ -50,17 +50,3 @@ class DBwriter:
         logging.info("Write points: {0}".format(json_body))
         client.write_points(json_body)
 
-
-# from datetime import datetime
-#
-# # # below datetime declaration are available
-# # # current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-# # # current_time = datetime.utcnow()
-# # # current_time = datetime.now()
-# current_time = datetime(2018, 4, 3)
-#
-# # current_time = strftime(current_time)
-# print(current_time)
-#
-# a = DBwriter(time=current_time, ai_value=0.81, stat_value=0.82, true_value = 1.)
-# a.write()
