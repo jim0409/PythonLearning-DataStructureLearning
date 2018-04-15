@@ -1,15 +1,9 @@
 import numpy as np
 import tensorflow as tf
-from project.simulation.db.influxdb.db_writer.influxdb_writer import DBwriter
-from datetime import datetime
-# current_time = datetime(2018, 4, 15)
-# #
-# # number_of_points = 500
-# #
-# #
-# # ai_diff = 0
-# # stat_diff = 0
-# #
+from project.db.influxdb.db_writer.influxdb_writer import DBwriter
+# from datetime import datetime
+# current_time = datetime(2018, 4, 16)
+#
 # a = 0.22
 # b = 0.78
 

@@ -2,14 +2,14 @@
 # using inverse cdf theory to generate a survival time via coxph-transformed model
 # then store data into influxdb and visualize it with grafana
 
-# !/usr/bin/env python3
 import os
 import sys
 import configparser
 import argparse
 import logging
+import numpy as np
+import tensorflow as tf
 from datetime import datetime
-from project.simulation.gen.rand_dist.linear import LinearSimulation
 
 sample_config = """
 [FitModel]
@@ -20,9 +20,7 @@ number_of_points = 500
 slope = 0.22
 intercept = 0.78
 """
-
 current_time = datetime(2018, 4, 14)
-
 logging.basicConfig(level=logging.INFO)
 
 parser = argparse.ArgumentParser()
@@ -57,8 +55,9 @@ else:
                 if conf2 is not None:
                     slope = conf2.getfloat('slope')
                     intercept = conf2.getfloat('intercept')
-                    logging.info(
-                        "with parameter slope %0.3f and intercept %0.3f" % (slope,intercept))
-                    linear_fit_model = LinearSimulation(time=current_time, a=slope, b=intercept)
-                    linear_fit_model.estimator_ai()
-                    linear_fit_model.writedb()
+                    logging.info("with parameter slope %0.3f and intercept %0.3f" % (slope, intercept))
+                    # linear_fit_model = LinearSimulation(time=current_time, a=slope, b=intercept)
+                    # linear_fit_model.estimator_ai()
+                    # linear_fit_model.writedb()
+
+
