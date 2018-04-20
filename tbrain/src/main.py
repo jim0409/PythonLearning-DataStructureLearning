@@ -22,7 +22,6 @@ data = generateData(total_series_length=total_series_length,
 # build-model
 batchX_placeholder = tf.placeholder(tf.float32, [batch_size, truncated_backprop_length])
 batchY_placeholder = tf.placeholder(tf.int32, [batch_size, truncated_backprop_length])
-
 init_state = tf.placeholder(tf.float32, [batch_size, state_size])
 
 # RNN layer designed (2)
@@ -45,21 +44,19 @@ states_series = []
 # forward pass through the network to get new state value
 # store all states in memory
 for current_input in inputs_series:
-    # format input
+    # format input; from origin [batch_size,]<unstack> to [batch_size, 1]<reshape>
     current_input = tf.reshape(current_input, [batch_size, 1])
     # mix both state and input data
     input_and_state_concatenated = tf.concat([current_input, current_state], 1)  # Increasing number of columns
     # perform matrix multiplication between weights and input, add bias
-    # squash with a nonlinearity, for probabiolity value
-    next_state = tf.tanh(tf.matmul(input_and_state_concatenated, W) + b)  # Broadcasted addition
+    # squash with a non-linearity, for probability value
+    next_state = tf.tanh(tf.matmul(input_and_state_concatenated, W) + b)  # Board casted addition
     # store the state in memory
     states_series.append(next_state)
     # set current state to next one
     current_state = next_state
 
 # calculate loss
-# second part of forward pass
-# logits short for logistic transform
 logits_series = [tf.matmul(state, W2) + b2 for state in states_series]  # Broadcasted addition
 # apply softmax nonlinearity for output probability
 predictions_series = [tf.nn.softmax(logits) for logits in logits_series]
@@ -69,17 +66,10 @@ losses = [tf.nn.sparse_softmax_cross_entropy_with_logits(labels=labels, logits=l
           zip(logits_series, labels_series)]
 # #computes average, one value
 total_loss = tf.reduce_mean(losses)
-
 train_step = tf.train.AdagradOptimizer(0.3).minimize(total_loss)
-
-
-
-
 
 # Step 3 Training the network
 with tf.Session() as sess:
-    # we stupidly have to do this everytime, it should just know
-    # that we initialized these vars. v2 guys, v2..
     sess.run(tf.global_variables_initializer())
     # interactive mode
     plt.ion()
@@ -126,7 +116,7 @@ with tf.Session() as sess:
 
             if batch_idx % 100 == 0:
                 print("Step", batch_idx, "Loss", _total_loss)
-                plot(loss_list, _predictions_series, batchX, batchY,truncated_backprop_length)
+                plot(loss_list, _predictions_series, batchX, batchY, truncated_backprop_length)
 
 plt.ioff()
 plt.show()
