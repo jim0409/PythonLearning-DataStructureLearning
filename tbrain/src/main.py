@@ -2,6 +2,8 @@ from __future__ import print_function, division
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
+from tbrain.module.simulation_data import generateData
+from tbrain.module.plot import plot
 
 # config parameters
 num_epochs = 3
@@ -13,17 +15,9 @@ echo_step = 3
 batch_size = 5
 num_batches = total_series_length // batch_size // truncated_backprop_length
 
-
-# gen time series data trend
-def generateData():
-    x = np.array(np.random.choice(2, total_series_length, p=[0.5, 0.5]))
-    y = np.roll(x, echo_step)
-    y[0:echo_step] = 0
-    x = x.reshape((batch_size, -1))  # The first index changing slowest, subseries as rows
-    y = y.reshape((batch_size, -1))
-    return (x, y)
-
-data = generateData()
+data = generateData(total_series_length=total_series_length,
+                    echo_step=echo_step,
+                    batch_size=batch_size)
 
 # build-model
 batchX_placeholder = tf.placeholder(tf.float32, [batch_size, truncated_backprop_length])
@@ -31,7 +25,7 @@ batchY_placeholder = tf.placeholder(tf.int32, [batch_size, truncated_backprop_le
 
 init_state = tf.placeholder(tf.float32, [batch_size, state_size])
 
-# NN layer designed (hereby : 2)
+# RNN layer designed (2)
 # With First Layer Weight matrix (dim : 5x4 ;since state_size is 4), bias matrix ( dim : 1x4 )
 W = tf.Variable(np.random.rand(state_size + 1, state_size), dtype=tf.float32)  # randomly initialize weights
 b = tf.Variable(np.zeros((1, state_size)), dtype=tf.float32)  # anchor, improves convergence, matrix of 0s
@@ -79,26 +73,7 @@ total_loss = tf.reduce_mean(losses)
 train_step = tf.train.AdagradOptimizer(0.3).minimize(total_loss)
 
 
-# visualizer
-def plot(loss_list, predictions_series, batchX, batchY):
-    plt.subplot(2, 3, 1)
-    plt.cla()
-    plt.plot(loss_list)
 
-    for batch_series_idx in range(5):
-        one_hot_output_series = np.array(predictions_series)[:, batch_series_idx, :]
-        single_output_series = np.array([(1 if out[0] < 0.5 else 0) for out in one_hot_output_series])
-
-        plt.subplot(2, 3, batch_series_idx + 2)
-        plt.cla()
-        plt.axis([0, truncated_backprop_length, 0, 2])
-        left_offset = range(truncated_backprop_length)
-        plt.bar(left_offset, batchX[batch_series_idx, :], width=1, color="blue")
-        plt.bar(left_offset, batchY[batch_series_idx, :] * 0.5, width=1, color="red")
-        plt.bar(left_offset, single_output_series * 0.3, width=1, color="green")
-
-    plt.draw()
-    plt.pause(0.0001)
 
 
 # Step 3 Training the network
@@ -117,7 +92,9 @@ with tf.Session() as sess:
 
     for epoch_idx in range(num_epochs):
         # generate data at every epoch, batches run in epochs
-        x, y = generateData()
+        x, y = generateData(total_series_length=total_series_length,
+                            echo_step=echo_step,
+                            batch_size=batch_size)
         # initialize an empty hidden state
         _current_state = np.zeros((batch_size, state_size))
 
@@ -149,7 +126,7 @@ with tf.Session() as sess:
 
             if batch_idx % 100 == 0:
                 print("Step", batch_idx, "Loss", _total_loss)
-                plot(loss_list, _predictions_series, batchX, batchY)
+                plot(loss_list, _predictions_series, batchX, batchY,truncated_backprop_length)
 
 plt.ioff()
 plt.show()
