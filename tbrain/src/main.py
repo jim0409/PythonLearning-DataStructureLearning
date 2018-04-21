@@ -15,10 +15,6 @@ echo_step = 3
 batch_size = 5
 num_batches = total_series_length // batch_size // truncated_backprop_length
 
-data = generateData(total_series_length=total_series_length,
-                    echo_step=echo_step,
-                    batch_size=batch_size)
-
 # build-model
 batchX_placeholder = tf.placeholder(tf.float32, [batch_size, truncated_backprop_length])
 batchY_placeholder = tf.placeholder(tf.int32, [batch_size, truncated_backprop_length])
