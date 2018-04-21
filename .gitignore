@@ -9,3 +9,4 @@ venv
 /TensorflowEx/TestBookExample/youtube/lesson10/captcha/*
 /TensorflowEx/TestBookExample/youtube/lesson10/tf2-captcha-result/*
 /models
+.vscode
