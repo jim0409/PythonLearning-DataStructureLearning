@@ -8,8 +8,8 @@ class Solution:
         # meet an non-zero value in nums store it, else ommit
         k = 0
         for num in nums:
-            if num!=0:
-                nums[k]=num
-                k+=1
+            if num != 0:
+                nums[k] = num
+                k += 1
         # relpace the k+1 index corresponding value with zero
-        nums[k:]=[0]*(len(nums)-k)
+        nums[k:] = [0] * (len(nums) - k)
