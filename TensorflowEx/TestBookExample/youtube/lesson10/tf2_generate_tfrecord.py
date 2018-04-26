@@ -95,6 +95,9 @@ def _convert_dataset(split_name, filenames, dataset_dir):
     sys.stdout.flush()
 
 
+if not os.path.isdir(TFRECORD_DIR):
+    os.mkdir(TFRECORD_DIR)
+
 # 判斷tdrecord文件是否存在
 if _dataset_exists(TFRECORD_DIR):
     print("tfrecord文件已存在")
