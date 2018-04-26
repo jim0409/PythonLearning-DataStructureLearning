@@ -5,6 +5,7 @@ import numpy as np
 from PIL import Image
 import random
 import sys
+import os
 
 number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
@@ -39,6 +40,12 @@ def gen_captcha_text_and_image():
 # 數量可能會少於10000，因為重名
 num = 10000
 if __name__ == '__main__':
+    if not os.path.isdir('captcha'):
+        os.makedirs('captcha')
+    else:
+        print('captcha exists')
+        os._exit(1)
+
     for i in range(num):
         gen_captcha_text_and_image()
         sys.stdout.write('\r>> Creating image %d/%d' % (i + 1, num))
