@@ -23,14 +23,15 @@ with tf.name_scope('layer'):
     with tf.name_scope('bias'):
         b = tf.Variable(tf.zeros([10]), name='bias')
     with tf.name_scope('wx_plus_b'):
-        wx_plus_b = tf.matmul(x,W)+b
+        wx_plus_b = tf.matmul(x, W)+b
     with tf.name_scope('softmax'):
         prediction = tf.nn.softmax(wx_plus_b)
 
 # define loss function
 # loss = tf.reduce_mean(tf.square(y - prediction))
 with tf.name_scope('loss'):
-    loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(labels=y, logits=prediction))
+    loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(
+        labels=y, logits=prediction))
 
 # use gradient descent method
 with tf.name_scope('train'):
@@ -43,7 +44,8 @@ with tf.name_scope('accuracy'):
     # tf.argmax = indicator (y ,{y >1)} ;1 ,else}
     # save result in a bool table
     with tf.name_scope('correct_prediction'):
-        correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(prediction, 1))  ## argmax return the maximun in the tensor
+        correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(
+            prediction, 1))  # argmax return the maximun in the tensor
 
     # calculate the accuracy
     with tf.name_scope('accuracy'):
@@ -60,5 +62,6 @@ with tf.Session() as sess:
             batch_xs, batch_ys = mnist.train.next_batch(batch_size)
             sess.run(train_step, feed_dict={x: batch_xs, y: batch_ys})
 
-    acc = sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})
+    acc = sess.run(accuracy, feed_dict={
+                   x: mnist.test.images, y: mnist.test.labels})
     print("iter " + str(epoch) + " ,Testing Accuracy " + str(acc))
