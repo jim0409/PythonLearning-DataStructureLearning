@@ -1,7 +1,7 @@
 # -- coding: utf-8 --
 import pandas as pd
-import matplotlib.pyplot as plt
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 
 # translate timestamp for matplotlib to plot
@@ -32,7 +32,28 @@ def read_tbrain_data(csv_data):
     return used_data
 
 
-Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
+# for a better version should use [array] - [0,array[:len(array)-1]
+def calculate_amplitude(data_price):
+    diff_values = []
+    amplitude_signs = []
+
+    for i in range(len(data_price)):
+        if i == 0:
+            amplitude_signs.append(0)
+            diff_values.append(0)
+        else:
+            diff_value = data_price[i] - data_price[i-1]
+            diff_values.append(diff_value)
+            if diff_value < 0:
+                amplitude_signs.append(-1)
+            else:
+                amplitude_signs.append(1)
+
+    return amplitude_signs, diff_values
+
+
+
+# Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # Df = readData('../data/tasharep.csv')
 # Df = readData('../data/tetfp.csv')
 # Df = readData('../data/tsharep.csv')
@@ -41,10 +62,22 @@ Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 
 
 # 使用code 50的data
-testdf = Df[(Df.code == 50)]
-# check test dataframe code
-print(testdf.head())
-print(testdf.tail())
+# data = Df[(Df.code == 59)]
 
-plt.plot(testdf.date, testdf.close)
-plt.show()
+# sample parts data
+# data = data[-10:]
+#
+# # print(data.close.values)
+# #
+# data_amp, data_diff_values = calculate_amplitude(data.close.values)
+#
+# plt.plot(data.date, data.close)
+# plt.figure()
+# plt.plot(data.date, data_amp)
+# plt.figure()
+# plt.plot(data.date, data_diff_values)
+#
+#
+# plt.show()
+#
+# print(len(data))
