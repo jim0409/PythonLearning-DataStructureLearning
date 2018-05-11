@@ -1,4 +1,4 @@
-from tbrain.module.import_tfbrain_data import read_tbrain_data
+from tbrain.reference_package.import_tfbrain_data import read_tbrain_data
 from tbrain.module.lstm_model import LSTMRNN
 import matplotlib.pyplot as plt
 import tensorflow as tf
