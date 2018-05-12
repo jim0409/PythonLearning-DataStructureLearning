@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/save_model/test.model.ckpt-96"
+all_model_checkpoint_paths: "/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/save_model/test.model.ckpt-96"

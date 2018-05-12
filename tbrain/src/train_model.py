@@ -6,12 +6,14 @@ import numpy as np
 import copy
 
 BATCH_START = 0  # 定義batch開始處
-TIME_STEPS = 10  # 每一層有幾個ＲＮＮ - 定義5個工作天一層
+TIME_STEPS = 10  # 每一層有幾個ＲＮＮ - 定義10個工作天一層
 BATCH_SIZE = 35  # 定義每次batch提出的量的大小
 INPUT_SIZE = 1  # 放入參數個數
 OUTPUT_SIZE = 1  # 輸出參數個數
 CELL_SIZE = 10  # 多少個hidden units
 LEARNING_RATE = 0.006  # 學習率
+TRAIN_LOOP = 96 # 迭代次數
+SAVING_DIR = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/save_model/'
 
 Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # 使用code 50的data
@@ -57,6 +59,7 @@ if __name__ == '__main__':
     # writer = tf.summary.FileWriter("logs", sess.graph)
 
     init = tf.global_variables_initializer()
+    saver = tf.train.Saver()
     sess.run(init)
 
     plt.ion()
@@ -64,7 +67,7 @@ if __name__ == '__main__':
 
     # 根據data量做調整，目前code 50有data 13XX
     # 能做迭代次數為 13XX/ (batch_size*step_size)
-    for i in range(96):
+    for i in range(TRAIN_LOOP):
         seq, res, xs = get_batch()
         if i == 0:
             feed_dict = {
@@ -91,6 +94,7 @@ if __name__ == '__main__':
         # plt.ylim((-1.2, 1.2))
         plt.draw()
         plt.pause(.3)
+    saver.save(sess, SAVING_DIR+'test.model.ckpt',global_step=96)
     print(xs[-1:])
     final_pred_array = pred
     final_res_array = res
@@ -99,6 +103,5 @@ if __name__ == '__main__':
 print("the final_close average is %.3f" % final_average)
 print("the final_close std is %.3f" % final_std)
 
-print("the final pred_array is ", final_pred_array.flatten()[-TIME_STEPS*2:])
-print("the final pred result is ", final_res_array.flatten()[-TIME_STEPS*2:])
-
+print("the final pred_array is ", final_pred_array.flatten()[-TIME_STEPS * 2:])
+print("the final pred result is ", final_res_array.flatten()[-TIME_STEPS * 2:])
