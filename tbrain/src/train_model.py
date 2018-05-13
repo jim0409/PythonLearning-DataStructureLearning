@@ -1,19 +1,21 @@
-from tbrain.reference_package.import_tfbrain_data import read_tbrain_data
-from tbrain.module.lstm_model import LSTMRNN
-import matplotlib.pyplot as plt
-import tensorflow as tf
-import numpy as np
 import copy
 
+import matplotlib.pyplot as plt
+import numpy as np
+import tensorflow as tf
+
+from tbrain.module.import_tfbrain_data import read_tbrain_data
+from tbrain.module.lstm_model import LSTMRNN
+
 BATCH_START = 0  # 定義batch開始處
-TIME_STEPS = 10  # 每一層有幾個ＲＮＮ - 定義10個工作天一層
+TIME_STEPS = 10  # 每一層有幾個RNN - 定義10個工作天一層
 BATCH_SIZE = 35  # 定義每次batch提出的量的大小
 INPUT_SIZE = 1  # 放入參數個數
 OUTPUT_SIZE = 1  # 輸出參數個數
 CELL_SIZE = 10  # 多少個hidden units
 LEARNING_RATE = 0.006  # 學習率
 TRAIN_LOOP = 96  # 迭代次數
-SAVING_DIR_FILE_NAME = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/save_model/test.model.ckpt'
+SAVING_DIR = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/save_model/'
 
 Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # 使用code 50的data
@@ -21,8 +23,8 @@ trainDf = Df[(Df.code == 50)]
 
 # declaration global variable
 final_pred_array = []
-final_average = 0
-final_std = 0
+batch_averages = []
+batch_stds = []
 
 
 # normalization
@@ -32,8 +34,8 @@ def normalization(data):
     data_std = np.std(data)
     z_data = (data - data_average) / data_std
 
-    final_average = data_average
-    final_std = data_std
+    batch_averages.append(data_average)
+    batch_stds.append(data_std)
 
     return z_data
 
@@ -59,8 +61,8 @@ if __name__ == '__main__':
     # writer = tf.summary.FileWriter("logs", sess.graph)
 
     init = tf.global_variables_initializer()
-    saver = tf.train.Saver()
     sess.run(init)
+    saver = tf.train.Saver(tf.global_variables())
 
     plt.ion()
     plt.show()
@@ -94,14 +96,14 @@ if __name__ == '__main__':
         # plt.ylim((-1.2, 1.2))
         plt.draw()
         plt.pause(.3)
-    saver.save(sess, SAVING_DIR_FILE_NAME, global_step=96)
+    saver.save(sess, SAVING_DIR + 'test.model.ckpt', global_step=96)
     print(xs[-1:])
     final_pred_array = pred
     final_res_array = res
 
 # 打印出平均數以及標準差
-print("the final_close average is %.3f" % final_average)
-print("the final_close std is %.3f" % final_std)
+print("the final_close average is ", batch_averages)
+print("the final_close std is ", batch_stds)
 
 print("the final pred_array is ", final_pred_array.flatten()[-TIME_STEPS * 2:])
 print("the final pred result is ", final_res_array.flatten()[-TIME_STEPS * 2:])
