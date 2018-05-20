@@ -2,8 +2,8 @@ from __future__ import print_function, division
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-from tbrain.reference_package.simulation_data import generateData
-from tbrain.reference_package.plot import plot
+from reference_package.simulation_data import generateData
+from reference_package.plot import plot
 
 # config parameters
 num_epochs = 3

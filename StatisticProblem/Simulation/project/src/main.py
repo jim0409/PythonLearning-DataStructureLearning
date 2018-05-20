@@ -2,14 +2,15 @@
 # via Statistic inference , Best linear Unbiased Estimator and NN with learning rate/ iterate 21 times
 # then store data into influxdb and visualize it with grafana
 
+import argparse
+import configparser
+import logging
 import os
 import sys
-import configparser
-import argparse
-import logging
+from datetime import datetime
+
 import numpy as np
 import tensorflow as tf
-from datetime import datetime
 from influxdb import InfluxDBClient
 
 sample_config = """

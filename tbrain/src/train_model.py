@@ -14,7 +14,7 @@ INPUT_SIZE = 1  # 放入參數個數
 OUTPUT_SIZE = 1  # 輸出參數個數
 CELL_SIZE = 10  # 多少個hidden units
 LEARNING_RATE = 0.006  # 學習率
-TRAIN_LOOP = 96  # 迭代次數
+TRAIN_LOOP = 97  # 迭代次數
 SAVING_DIR = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/save_model/'
 
 Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52

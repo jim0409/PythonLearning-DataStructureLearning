@@ -65,19 +65,10 @@ def calculate_amplitude(data_price):
 # data = Df[(Df.code == 59)]
 
 # sample parts data
-# data = data[-10:]
-#
-# # print(data.close.values)
-# #
+
+
+# data = data[-20:]
 # data_amp, data_diff_values = calculate_amplitude(data.close.values)
-#
-# plt.plot(data.date, data.close)
-# plt.figure()
-# plt.plot(data.date, data_amp)
-# plt.figure()
+# print(data_amp)
 # plt.plot(data.date, data_diff_values)
-#
-#
 # plt.show()
-#
-# print(len(data))

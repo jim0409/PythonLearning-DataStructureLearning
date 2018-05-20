@@ -1,5 +1,7 @@
 # 筆記：一開始以為只是單純比較字符，後來發現題目用意是要比較兩邊字串內的元素均要一致！所以需要考驢到存在/存在個數於是決定用dictionary來做～
-a = 'abbe'
+a = 'abbc'
+b = 'dog cat cat tiger'
+
 # b = 'abe'
 b = 'aebb'
 

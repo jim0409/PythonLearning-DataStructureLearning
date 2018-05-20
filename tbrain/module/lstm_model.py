@@ -70,7 +70,7 @@ class LSTMRNN(object):
         return tf.square(tf.subtract(labels, logits))
 
     def _weight_variable(self, shape, name='weights'):
-        initializer = tf.random_normal_initializer(mean=0., stddev=1.,)
+        initializer = tf.random_normal_initializer(mean=0., stddev=2.,)
         return tf.get_variable(shape=shape, initializer=initializer, name=name)
 
     def _bias_variable(self, shape, name='biases'):
