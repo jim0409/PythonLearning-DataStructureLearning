@@ -1,16 +1,10 @@
 import copy
 
-import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 
 from tbrain.module.import_tfbrain_data import read_tbrain_data
 from tbrain.module.lstm_model import LSTMRNN
-
-# read raw data
-Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
-# 使用code 50的data
-trainDf = Df[(Df.code == 50)]
 
 # read parameter config
 BATCH_START = 0  # 定義batch開始處
@@ -23,25 +17,46 @@ LEARNING_RATE = 0.006  # 學習率
 TRAIN_LOOP = 96  # 迭代次數
 SAVING_DIR = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/save_model/'
 
+Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
+# 使用code 50的data
+trainDf = Df[(Df.code == 50)]
+
+### check data tail
+
+feed_data = copy.copy(trainDf[-355:-5])
+true_value = trainDf[-5:].open.values.reshape(5, 1)
+
+x_input = feed_data.close.values.reshape(35, 10, 1)
+
+
+###
+
+def show_diff(seq1, seq2, name):
+    print("---diff : %s---" % name)
+    print(seq2)
+    print(seq1 - seq2)
+
+
+def final_pred(pred, feed_data):
+    global true_value
+    openData = feed_data.open
+    final_price = openData[-5:]
+    final_std = np.std(openData[-5:])
+    print(final_std)
+    print(final_price)
+
+    pred_result = (pred[-5:] * final_std + trainDf[-10:-5].close.values.reshape(5, 1))
+    pred_result2 = (pred[-5:] * final_std + trainDf[-10:-5].open.values.reshape(5, 1))
+
+    show_diff(true_value, pred_result, "pred1")
+    show_diff(true_value, pred_result2, "pred2")
+
+###
 model = LSTMRNN(TIME_STEPS, INPUT_SIZE, OUTPUT_SIZE, CELL_SIZE, BATCH_SIZE, LEARNING_RATE)
-
-# check saving_dir
-print(SAVING_DIR)
-
-# check data tail
-testData = copy.copy(trainDf[-350:].close)
-openData = copy.copy(trainDf[-350:].open)
-
-final_average = (openData[-6:-1])
-final_std = np.std(openData[-6:-1])
-
 saver = tf.train.Saver(tf.global_variables())
-
 module_file = tf.train.latest_checkpoint(SAVING_DIR)
-
 init = tf.global_variables_initializer()
 
-x_input = testData.reshape(35, 10, 1)
 with tf.Session() as sess:
     sess.run(init)
     saver.restore(sess, module_file)
@@ -52,8 +67,4 @@ with tf.Session() as sess:
 
     pred = sess.run(model.pred, feed_dict=feed_dict)
 
-    print(final_std, final_average)
-    final_average = np.average(final_average)
-    print(pred[-6:-1] * final_std*final_std)
-    plt.plot(pred[-6:-1] * final_std + final_average)
-    plt.show()
+    final_pred(pred, feed_data)

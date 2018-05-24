@@ -21,6 +21,14 @@ Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # 使用code 50的data
 trainDf = Df[(Df.code == 50)]
 
+##
+feed_data = copy.copy(trainDf[-355:-5])
+x_input_pred = feed_data.close.values.reshape(35, 10, 1)
+
+
+##
+
+
 # declaration global variable
 final_pred_array = []
 batch_averages = []
@@ -93,10 +101,12 @@ if __name__ == '__main__':
 
         # plotting
         plt.plot(xs[0, :], res[0].flatten(), 'r', xs[0, :], pred.flatten()[:TIME_STEPS], 'b--')
-        # plt.ylim((-1.2, 1.2))
         plt.draw()
         plt.pause(.3)
+
     saver.save(sess, SAVING_DIR + 'test.model.ckpt', global_step=96)
+
+    # 顯示最後使用時間軸
     print(xs[-1:])
     final_pred_array = pred
     final_res_array = res
