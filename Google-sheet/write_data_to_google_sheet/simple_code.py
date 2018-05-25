@@ -1,9 +1,9 @@
 import sys
 import time
-import datetime
+
+# import datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials as SAC
-
 
 GDriveJSON = 'PythonUpload.json'
 GSpreadSheet = 'TestGithubCommit'
@@ -25,6 +25,5 @@ while True:
     count = count + 1
     print('新增一列資料到試算表', GSpreadSheet)
     time.sleep(WaitSecond)
-
 
 # gitLog = "git log --pretty=format:'%h% -%d% %s (%ci) <%an>' --abbrev-commit|grep tag"

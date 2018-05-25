@@ -8,8 +8,8 @@ from oauth2client.service_account import ServiceAccountCredentials as SAC
 GDriveJSON = 'PythonUpload.json'
 GSpreadSheet = 'TestGithubCommit'
 
-path = 'cd /Users/jimweng/GitGoogleRepo/'
-execute_folder = 'mlytics_qa'
+path = 'cd /Users/jimweng/MlyticsRepo/'
+execute_folder = 'mlytics-qa'
 git_log = 'git log --pretty=format:"%h% -%d% %s (%ci) <%an>" --abbrev-commit|grep tag|tail -1'
 execute_cmd = path+execute_folder+" && "+git_log
 
