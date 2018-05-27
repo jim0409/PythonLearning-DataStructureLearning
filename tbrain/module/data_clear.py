@@ -33,6 +33,7 @@ Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # Df = readData('../data/tasharep.csv')
 # Df = readData('../data/tetfp.csv')
 # Df = readData('../data/tsharep.csv')
+
 trainDf = Df[(Df.code == codeNum)]
 
 
@@ -48,5 +49,6 @@ trainDF = trainDf[startTime:endTime]
 # data = data[-20:]
 data_amp, data_diff_values = calculate_amplitude(trainDF.open)
 print(data_amp)
+print('data length %d'%len(trainDf.date))
 plt.plot(trainDF.date, data_diff_values,'ro')
 plt.show()

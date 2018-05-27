@@ -20,11 +20,12 @@ SAVING_DIR = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/sav
 Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # 使用code 50的data
 trainDf = Df[(Df.code == 50)]
+trainDf.index = trainDf.date
 
 ### check data tail
 
 feed_data = copy.copy(trainDf[-355:-5])
-true_value = trainDf[-5:].open.values.reshape(5, 1)
+final_open_value = trainDf[-5:].open.values.reshape(5, 1)
 
 x_input = feed_data.close.values.reshape(35, 10, 1)
 
@@ -34,22 +35,23 @@ x_input = feed_data.close.values.reshape(35, 10, 1)
 def show_diff(seq1, seq2, name):
     print("---diff : %s---" % name)
     print(seq2)
-    print(seq1 - seq2)
+    print(seq2-seq1)
 
 
 def final_pred(pred, feed_data):
-    global true_value
-    openData = feed_data.open
-    final_price = openData[-5:]
-    final_std = np.std(openData[-5:])
-    print(final_std)
-    print(final_price)
+    global final_open_value
+    feed_x_input = feed_data.open
+    final_feed_price = feed_x_input [-5:]
+    final_feed_std = np.std(feed_x_input[-5:])
+    print(final_feed_std)
+    print(final_feed_price)
+    print(final_open_value)
 
-    pred_result = (pred[-5:] * final_std + trainDf[-10:-5].close.values.reshape(5, 1))
-    pred_result2 = (pred[-5:] * final_std + trainDf[-10:-5].open.values.reshape(5, 1))
+    pred_result = (pred[-5:] * final_feed_std + trainDf[-10:-5].close.values.reshape(5, 1))
+    pred_result2 = (pred[-5:] * final_feed_std + trainDf[-10:-5].open.values.reshape(5, 1))
 
-    show_diff(true_value, pred_result, "pred1")
-    show_diff(true_value, pred_result2, "pred2")
+    show_diff(final_open_value, pred_result, "pred_open with close")
+    show_diff(final_open_value, pred_result2, "pred_open with open")
 
 ###
 model = LSTMRNN(TIME_STEPS, INPUT_SIZE, OUTPUT_SIZE, CELL_SIZE, BATCH_SIZE, LEARNING_RATE)

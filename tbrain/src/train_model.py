@@ -9,25 +9,17 @@ from tbrain.module.lstm_model import LSTMRNN
 
 BATCH_START = 0  # 定義batch開始處
 TIME_STEPS = 10  # 每一層有幾個RNN - 定義10個工作天一層
-BATCH_SIZE = 35  # 定義每次batch提出的量的大小
+BATCH_SIZE = 15  # 定義每次batch提出的量的大小
 INPUT_SIZE = 1  # 放入參數個數
 OUTPUT_SIZE = 1  # 輸出參數個數
 CELL_SIZE = 10  # 多少個hidden units
 LEARNING_RATE = 0.006  # 學習率
-TRAIN_LOOP = 97  # 迭代次數
+TRAIN_LOOP = 117  # 迭代次數
 SAVING_DIR = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/save_model/'
 
 Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # 使用code 50的data
 trainDf = Df[(Df.code == 50)]
-
-##
-feed_data = copy.copy(trainDf[-355:-5])
-x_input_pred = feed_data.close.values.reshape(35, 10, 1)
-
-
-##
-
 
 # declaration global variable
 final_pred_array = []
@@ -55,7 +47,7 @@ def get_batch():
     xs = np.array(copy.copy(trainDf.date[start_pt:end_pt]).reshape(BATCH_SIZE, TIME_STEPS))
     res = np.array(copy.copy(trainDf.open[1 + start_pt:1 + end_pt]).reshape(BATCH_SIZE, TIME_STEPS))
     res = normalization(res)
-    seq = np.array(copy.copy(trainDf.close[start_pt:end_pt]).reshape(BATCH_SIZE, TIME_STEPS))
+    seq = np.array(copy.copy(trainDf.open[start_pt:end_pt]).reshape(BATCH_SIZE, TIME_STEPS))
     seq = normalization(seq)
 
     BATCH_START += TIME_STEPS
