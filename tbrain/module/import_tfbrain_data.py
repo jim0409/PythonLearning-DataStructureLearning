@@ -1,7 +1,6 @@
-# -- coding: utf-8 --
-import pandas as pd
 from datetime import datetime
-import matplotlib.pyplot as plt
+
+import pandas as pd
 
 
 # translate timestamp for matplotlib to plot
