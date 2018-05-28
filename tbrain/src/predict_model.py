@@ -19,12 +19,12 @@ SAVING_DIR = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/sav
 
 Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # 使用code 50的data
-trainDf = Df[(Df.code == 50)]
+trainDf = Df[(Df.code == 55)]
 trainDf.index = trainDf.date
 
 ### check data tail
 
-feed_data = copy.copy(trainDf[-355:-5])
+feed_data = copy.copy(trainDf[-350:])
 final_open_value = trainDf[-5:].open.values.reshape(5, 1)
 
 x_input = feed_data.close.values.reshape(35, 10, 1)

@@ -19,7 +19,7 @@ SAVING_DIR = '/Users/jimweng/PythonLearning-DataStructureLearning/tbrain/src/sav
 
 Df = read_tbrain_data('../data/taetfp.csv')  # 50 51 52
 # 使用code 50的data
-trainDf = Df[(Df.code == 50)]
+trainDf = Df[(Df.code == 55)]
 
 # declaration global variable
 final_pred_array = []
