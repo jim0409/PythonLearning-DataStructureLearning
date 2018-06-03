@@ -63,5 +63,4 @@ analytic_map, raw_data_map = get_analytic_maps('../data/taetfp.csv')
 # save maps
 file = open('pickle_example.pickle', 'wb')
 pickle.dump(analytic_map, file)
-pickle.dump(raw_data_map, file)
 file.close()
