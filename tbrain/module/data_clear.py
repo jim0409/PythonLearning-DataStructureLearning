@@ -3,7 +3,7 @@ from tbrain.module.import_tfbrain_data import read_tbrain_data
 
 startTime = '20180408'
 endTime = '20180605'
-codeNum = 50
+codeNum = 1101
 
 def showDataTrend(x,y):
     plt.figure()
@@ -29,7 +29,7 @@ def calculate_amplitude(data_price):
 
     return amplitude_signs, diff_values
 
-Df = read_tbrain_data('../data/taetfp.csv')
+# Df = read_tbrain_data('../data/taetfp.csv')
 # [  50   51   52   53   54   55   56   57   58   59 6201 6203 6204 6208
 #   690  692  701  713]
 # 18
@@ -38,7 +38,7 @@ Df = read_tbrain_data('../data/taetfp.csv')
 # [  50   51   52   53   54   55   56   57   58   59 6201 6203 6204 6208
 #   690  692  701  713]
 # 18
-# Df = read_tbrain_data('../data/tsharep.csv')
+Df = read_tbrain_data('../data/tsharep.csv')
 
 # print(Df.info())
 unique_code = Df.code.unique()
@@ -48,6 +48,10 @@ print(len(unique_code))
 
 trainDf = Df[(Df.code == codeNum)]
 
+# print(trainDf.head())
+trainDf.index= trainDf.date
+
+trainDf.to_csv('test.csv', sep='\t')
 
 """
 # 使用最近一兩年的資料
