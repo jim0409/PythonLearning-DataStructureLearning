@@ -58,7 +58,7 @@ def train_arima_model(codeNum, pdq, seasonal_pdq, df):
 
 
 # return analytic map and raws data map with the input param "data_path"
-analytic_map, raw_data_map = get_analytic_maps('../data/taetfp.csv')
+raw_data_map, analytic_map = get_analytic_maps('../data/taetfp.csv')
 
 # save maps
 file = open('pickle_example.pickle', 'wb')
