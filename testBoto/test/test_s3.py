@@ -1,6 +1,6 @@
 import boto3
 from moto import mock_s3
-from .mymodule import MyModel
+from testBoto.s3_unittest.mymodule import MyModel
 
 
 @mock_s3
@@ -13,8 +13,9 @@ def test_my_model_save():
     model_instance.save()
 
     body = conn.Object('mybucket', 'steve').get()['Body'].read().decode("utf-8")
+    # print(body)
+    assert body == 'is awesome'
 
-    assert body == b'is awesome'
 
 if __name__ == '__main__':
     test_my_model_save()
