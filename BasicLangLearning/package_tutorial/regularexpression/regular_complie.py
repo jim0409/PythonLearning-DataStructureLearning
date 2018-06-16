@@ -15,3 +15,17 @@ import re
 pattern = re.compile(r'\d+')
 m = pattern.match('one12twothree34four')
 print(m)
+
+m1 = pattern.match('one12twothree34four', 2, 10) # 從元素'e'開始匹配
+print(m1)
+
+m2 = pattern.match('one12twothree34four', 3, 10) # 從元素'1'開始匹配
+print(m2)
+
+print(m2.group(0))
+
+print(m2.start(0))
+
+print(m2.end(0))
+
+print(m2.span(0))
