@@ -7,7 +7,9 @@
 
 import requests
 
-requests.post('http://localhost:8888', data={u'post': u'Andr\xe9 T\xe9chin\xe9'})
+r= requests.post('http://localhost:8888', data={u'post': u'Andr\xe9 T\xe9chin\xe9'})
+if r.status_code == requests.codes.ok:
+    print(r.content)
 
 # run check encode
 # import urllib.parse
