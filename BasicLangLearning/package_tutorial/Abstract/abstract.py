@@ -1,6 +1,8 @@
 from abc import ABCMeta, abstractmethod
 
-class IStream(metaclass=ABCMeta):
+
+class IStream(object):  # python2 寫法
+    # class IStream(metaclass=ABCMeta): #python3 寫法
     @abstractmethod
     def read(self, maxbytes=-1):
         # print('interface')
@@ -18,6 +20,7 @@ class SocketStream(IStream):
 
     def write(self, data):
         pass
+
 
 class SocketStream2(IStream):
     def read(self, maxbytes=-1):
