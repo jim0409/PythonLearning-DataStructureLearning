@@ -1,8 +1,8 @@
 from abc import ABCMeta, abstractmethod
 
 
-class IStream(object):  # python2 寫法
-    # class IStream(metaclass=ABCMeta): #python3 寫法
+class IStream(object):  # python2 method
+    # class IStream(metaclass=ABCMeta): #python3 method
     @abstractmethod
     def read(self, maxbytes=-1):
         # print('interface')
