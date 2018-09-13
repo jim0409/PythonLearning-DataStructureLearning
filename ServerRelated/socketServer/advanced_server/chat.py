@@ -16,6 +16,11 @@ class Server:
             # receive 1024 bytes for maximum
             data = c.recv(1024)
             for connection in self.connections:
+                '''
+                # pass origin connection msg;
+                if connection is c:
+                    continue
+                '''
                 # only send raw bytes
                 connection.send(bytes(data))
             if not data:
