@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import SocketServer
 import hashlib
 import base64
