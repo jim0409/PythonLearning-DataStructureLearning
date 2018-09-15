@@ -75,6 +75,7 @@ To read the payload data, you must know when to stop reading. That’s why the p
 `where leave FIN bit, the OPCODE, the LEN and finally the payload`
 
 ## finally :
+- test with browser
 > make whole on roll and execute, then open browser to check it!
 ```javascript
 ss =new WebSocket("ws://localhost:9999")
@@ -83,4 +84,18 @@ ss.onmessage = function(event)
 {console.log(event.data);};
 
 ss.send('I have high ground')
+```
+
+- test with 'curl'
+> with a terminal (refer to https://gist.github.com/htp/fbce19069187ec1cc486b594104f01d0)
+```shell
+curl --include \
+     --no-buffer \
+     --header "Connection: Upgrade" \
+     --header "Upgrade: websocket" \
+     --header "Host: localhost:9999" \
+     --header "Origin: http://localhost:9999" \
+     --header "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" \
+     --header "Sec-WebSocket-Version: 13" \
+     http://localhost:9999/
 ```

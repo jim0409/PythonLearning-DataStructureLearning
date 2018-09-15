@@ -3,12 +3,18 @@ import SocketServer
 import hashlib
 import base64
 
+# WS_MAGIC_STRING is a magic string :
+# refer to
+# https://stackoverflow.com/questions/13456017/what-does-258eafa5-e914-47da-95ca-c5ab0dc85b11-means-in-websocket-protocol
 WS_MAGIC_STRING = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
 
 class MyTCPHandler(SocketServer.BaseRequestHandler):
 
     def handle(self):
         # self.request is the TCP socket connected to the client
+        # for more info about 'recv'
+        # refer to :
+        # https: // read01.com / zh - tw / E8K67.html  # .W5x00UUzbOQ
         self.data = self.request.recv(1024).strip()
         headers = self.data.split("\r\n")
 
