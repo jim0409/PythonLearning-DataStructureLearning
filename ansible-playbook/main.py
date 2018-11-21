@@ -44,7 +44,7 @@ passwords = dict(vault_pass='secret')
 results_callback = ResultCallback()
 
 # create inventory, use path to host config file as source or hosts in a comma separated string
-inventory = InventoryManager(loader=loader, sources='localhost,')
+inventory = InventoryManager(loader=loader, sources='/Users/macpro/Desktop/ansible-flow-tutorial/inventories/env1/inventory')
 
 # variable manager takes care of merging all the different sources to give you a unifed view of variables available in each context
 variable_manager = VariableManager(loader=loader, inventory=inventory)
@@ -52,11 +52,13 @@ variable_manager = VariableManager(loader=loader, inventory=inventory)
 # create datastructure that represents our play, including tasks, this is basically what our YAML loader does internally.
 play_source = dict(
     name="Ansible Play",
-    hosts='localhost',
+    hosts='localhost, dpdk',
     gather_facts='no',
     tasks=[
-        dict(action=dict(module='shell', args='ls'), register='shell_out'),
-        dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
+        dict(action=dict(module='shell', args='hostname'), register='shell_out'),
+
+        # dict(action=dict(module='shell', args='ls'), register='shell_out'),
+        # dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
     ]
 )
 
