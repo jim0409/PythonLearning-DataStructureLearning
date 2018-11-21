@@ -3,6 +3,4 @@
 
   tasks:
    - shell: |
-       ping 8.8.8.8 -c 3
        hostname
-       echo "success"
