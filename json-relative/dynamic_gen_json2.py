@@ -1,18 +1,5 @@
 import json
 
-
-class ACLlsit(object):
-    def __new__(clz):
-        acl_list = dict()
-        acl_list['enable'] = 0
-        acl_list['prefix'] = []
-        acl_list['asn'] = []
-        acl_list['gslb'] = []
-        print(acl_list)
-
-    def __init__(self, enable_status, ):
-
-
 mit1 = dict()
 mit1['id'] = 'MAT'
 
@@ -39,4 +26,28 @@ mitigation_entity_data = [mit1, ]
 print(type(mitigation_entity_data))
 print(mitigation_entity_data[0])
 
-ACLlsit()
+class ACLlsit(object):
+    # def __new__(clz):
+    #     acl_list = {}
+    #     acl_list['enable'] = 0
+    #     acl_list['prefix'] = []
+    #     acl_list['asn'] = []
+    #     acl_list['gslb'] = []
+    #     print(acl_list)
+
+    def __init__(self, enable_status, prefix_list, asn_list, gslb_list):
+        self.acl_list = {}
+        self.acl_list['enable'] = enable_status
+        self.acl_list['prefix'] = prefix_list
+        self.acl_list['asn'] = asn_list
+        self.acl_list['gslb_list'] = gslb_list
+
+    def get_acl_list(self):
+        return self.acl_list
+
+
+a = ACLlsit(enable_status=mit1_white_dict_enable, prefix_list=mit1_white_dict_prefix_list
+            , asn_list=mit1_white_dict_asn_lsit, gslb_list=mit1_white_dcit_gslb_list).get_acl_list()
+
+
+
