@@ -1,0 +1,6 @@
+- name: print hostname
+  hosts: jim-weng1
+
+  tasks:
+   - shell: |
+       hostname
