@@ -1,0 +1,1 @@
+# This folder would record some learning notes from book 'Python Algorithm with Pic'
