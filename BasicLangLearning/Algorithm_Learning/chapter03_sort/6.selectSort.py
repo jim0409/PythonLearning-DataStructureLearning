@@ -1,4 +1,4 @@
-from show_data import show_data
+from chapter03_sort.show_data import show_data
 
 data = [16, 25, 39, 27, 12, 8, 45, 63]
 
