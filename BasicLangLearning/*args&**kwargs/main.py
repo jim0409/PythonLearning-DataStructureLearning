@@ -18,13 +18,13 @@ def test2(**kwargs):
     for i, j in kwargs.items():
         key.append(i)
         value.append(j)
-    print key
-    print value
+    print(key)
+    print(value)
     return key, value
 
 
 print(test(a))
-print test(b)
+print(test(b))
 
 print("-----")
 test2(key=a, value=b, index=b)
@@ -46,7 +46,7 @@ class testclass(object):
     @staticmethod
     def print_test(test, test2):
         a = testclass(test, test2)
-        print "the test a1 is {}, while the test a2 is {}".format(a.__a1, a.__a2)
+        print ("the test a1 is {}, while the test a2 is {}".format(a.__a1, a.__a2))
 
 
 # @staticmethod create method iff func is using
@@ -56,7 +56,7 @@ class testclass(object):
 def verifytestclass(**kwargs):
     for i, j in kwargs.items():
         if i=='a1':
-            print "the expect verify class -- 'i' : {} ; 'j : {}".format(i, j)
+            print("the expect verify class -- 'i' : {} ; 'j : {}".format(i, j))
             testclass.print_test(i, j)
 
 
