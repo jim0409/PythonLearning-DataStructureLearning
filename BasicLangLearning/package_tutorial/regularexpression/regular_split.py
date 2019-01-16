@@ -13,9 +13,9 @@ import re
 m = re.split('\W+', 'runoob, runoob, runoob.')
 print(m)
 
-m1 = re.split('(\W+)', ' runoob, runoob, runoob.')
+m1 = re.split('(\W+)', 'runoob, runoob, runoob.')
 print(m1)
 
-m2 = re.split('\W+', ' runoob, runoob, runoob.', 1)
+m2 = re.split('\W+', 'runoob, runoob, runoob.', 1)
 print(m2)
 
