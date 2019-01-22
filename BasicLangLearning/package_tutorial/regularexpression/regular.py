@@ -28,6 +28,13 @@ match_ipv6 = ipv6_address.match(input('etner a valid ipv6: '))
 if match_ipv6:
     print(match_ipv6.group())
 
+
+mac_address = re.compile('^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})')
+
+match_mac = mac_address.match(input('enter a valid mac: '))
+if match_mac:
+    print(match_mac.group())
+
 # pattern2 = re.compile(r'\w{5} \w{5}!')
 
 # match2 = pattern2.match('hello world!')
