@@ -35,6 +35,13 @@ match_mac = mac_address.match(input('enter a valid mac: '))
 if match_mac:
     print(match_mac.group())
 
+
+as_number = re.compile('\d+\.?\d+(?:(?:, ?| )\d+\.?\d+){0,}')
+
+match_asn = as_number.match(input('enter a valid asn: '))
+if match_asn:
+    print(match_asn.group())
+
 # pattern2 = re.compile(r'\w{5} \w{5}!')
 
 # match2 = pattern2.match('hello world!')
