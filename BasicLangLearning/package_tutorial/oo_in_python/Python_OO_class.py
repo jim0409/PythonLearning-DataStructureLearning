@@ -1,7 +1,7 @@
 #使用class類別
 #定義__init__(self): 放置參數前需要先宣告出要使用的變數
 #可以藉由在變數前面加入__ 將該宣告變數變成私有變數, 否則python內預設變數皆為公開變數
-class Human():      #等同class Human(object):   只是object可以省略
+class Human:      #等同class Human(object):   只是object可以省略
     def __init__(self,h,w):
         self.__height=h
         self.__weight=w

@@ -1,14 +1,14 @@
 class field_key(object):
-    basic_compare_list = [
+    basic_compare_list = {
 		'EQUAL',
 		'NOT_EQUAL',
-	]
+	}
 
-    PKT_compare_list = basic_compare_list + ['OVER', 'UNDER']
-    TCP_FLAG_compare_list = basic_compare_list + ['AND', 'OR']
+    PKT_compare_list = basic_compare_list.union({'OVER', 'UNDER'})
+    TCP_FLAG_compare_list = basic_compare_list.union({'AND', 'OR'})
 
     value_list = {
-		'ipv4': basic_compare_list,
+		'ipv4': {"method": basic_compare_list, "validator":"regipv4"},
 		'ipv6': basic_compare_list,
 		'mac': basic_compare_list,
 		'CIDR': basic_compare_list,
@@ -70,8 +70,16 @@ print(a.field_list['REMOTE_IP'])
 
 print(field_key.key_to_dict('LOCAL_IP'))
 
-# def key_to_dict(key):
-#     a = field_key()
-#     return {i: a.value_list[i] for i in a.field_list[key]}
+r_k = field_key.key_to_dict('LOCAL_IP')
+print(r_k.items())
+try:
+	print(r_k.items()['mac'])
+except:
+	print("r_k.items()['mac'] is not callable")
+	pass
 
-# print(key_to_dict('LOCAL_IP'))
+dict_r_k = dict(r_k.items())
+print(dict_r_k['mac'])
+
+# reference: https://www.zhihu.com/question/62962708
+# python3 中的dict不是列表，需要自己轉list(dict.items)
