@@ -83,3 +83,26 @@ print(dict_r_k['mac'])
 
 # reference: https://www.zhihu.com/question/62962708
 # python3 中的dict不是列表，需要自己轉list(dict.items)
+
+# extend ref: https://www.programiz.com/python-programming/methods/dictionary/items
+# python3 中的items()方法相當於python2中的viewitems()，所以呼叫items()會回傳dict_items([(dicts)])
+# 但是仍然支援del做個別item下的物件刪除
+"""
+# random sales dictionary
+sales = { 'apple': 2, 'orange': 3, 'grapes': 4 }
+
+items = sales.items()
+print('Original items:', items)
+
+# delete an item from dictionary
+del[sales['apple']]
+print('Updated items:', items)
+"""
+
+# output
+"""
+Original items: dict_items([('grapes', 4), ('apple', 2), ('orange', 3)])
+Updated items: dict_items([('grapes', 4), ('orange', 3)])
+Original items: dict_items([('grapes', 4), ('apple', 2), ('orange', 3)])
+Updated items: dict_items([('grapes', 4), ('orange', 3)])
+"""
