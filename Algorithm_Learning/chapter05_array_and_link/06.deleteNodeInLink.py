@@ -25,8 +25,9 @@ class employee:
 
 def del_ptr(head, ptr):
 	top = head
-	if ptr.num == head.num:
-		head = head.num
+	if ptr.num == head.num:  # 情形一：刪除點在串列首
+		print("enter and breadk")
+		head = head.next
 		print('already delete the [%d] member %s ($: %d)' % (ptr.num, ptr.name, ptr.salary))
 
 	else:
@@ -47,8 +48,8 @@ def del_ptr(head, ptr):
 def main():
 	namedata = ['Allen', 'Scott', 'Marry', 'Jon', 'Mark', 'Ricky', 'Lisa', 'Jasica', 'Hanson', 'Amy', 'Bob', 'Jack']
 
-	data = [[1001, 32367], [1002, 24388], [1003, 27556], [1007, 31299], \
-			[1012, 42660], [1014, 25676], [1018, 44145], [1043, 52182], \
+	data = [[1001, 32367], [1002, 24388], [1003, 27556], [1007, 31299],
+			[1012, 42660], [1014, 25676], [1018, 44145], [1043, 52182],
 			[1031, 32769], [1037, 21100], [1041, 32196], [1046, 25776]]
 
 	print("member [id salary] [id salary] [id salary] [id salary]")
@@ -91,7 +92,8 @@ def main():
 					ptr = del_ptr(head, ptr)
 					find = find + 1
 					head = ptr
-					ptr = ptr.next
+					print(type(ptr))
+				ptr = ptr.next
 			if find == 0:
 				print("####### empty result #######")
 
