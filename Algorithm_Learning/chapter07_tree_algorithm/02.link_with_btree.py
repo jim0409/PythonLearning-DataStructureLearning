@@ -18,13 +18,17 @@ def create_tree(root, val):  # define a function to create binary tree
     else:
         current = root
         while current is not None:
+            # set a backup for current
+            # generate current as the iterator for comparison
             backup = current
+            # print("show the info of current:\ndata {}\nleft {}\nright {}\n".format(current.data, current.left, current.right))
             if current.data > val:
                 current = current.left
 
             else:
                 current = current.right
 
+        # assign backup as the root for newnode
         if backup.data > val:
             backup.left = newnode
 
