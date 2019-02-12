@@ -11,8 +11,11 @@ parser = argparse.ArgumentParser()
 #   123
 parser.add_argument("echo", help="echo the string you use here")
 parser.add_argument('day',type=int,help='assigned number for day')
+# add with specify -c
+parser.add_argument('-c', '--config', type=str, help='need to insert an valid conf file')
 
 args = parser.parse_args()
-print(args.echo)
-print(args.day)
+print("the value of args.echo is {}".format(args.echo))
+print("the value of args.day is {}".format(args.day))
+print("value after config {}".format(args.config))
 
