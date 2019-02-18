@@ -26,7 +26,7 @@ print('')
 btree=Btree_create(btree_deep, data)
 
 print('the btree content :')
-for i in range(1, btree_deep):
+for i in range(1, btree_deep+1):
     for j in range(pow(2, i-1), pow(2,i)):
         print('[{}]'.format(btree[j]), end='')
     print()
