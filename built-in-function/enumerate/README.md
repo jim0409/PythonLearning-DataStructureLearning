@@ -5,6 +5,15 @@ This PEP proposes adding an enumeration type to the Python standard library.
 
 An enumeration is a set of symbolic names bound to unique, constant values. Within an enumeration, the values can be compared by identity, and the enumeration itself can be iterated over.
 
+# StackOverflow
+What's the purpose of enums? What value do they create for the language? When should I use them and when should I avoid them?
+The Enum type got into Python via PEP 435. The reasoning given is:
+
+The properties of an enumeration are useful for defining an immutable, related set of constant values that may or may not have a semantic meaning.
+
+When using numbers and strings for this purpose, they could be characterized as "magic numbers" or "magic strings". Numbers rarely carry with them the semantics, and strings are easily confused (capitalization? spelling? snake or camel-case?)
+
+
 # 使用情境：
 1. 利用列舉型別來增進程式的可讀性; if ChosenColor=1 <=> if ChosenColor=COLOR_RED
 2. 使用列舉型別增進可靠度; 避免處處修改同樣的值 COLOR_RED
@@ -15,5 +24,6 @@ An enumeration is a set of symbolic names bound to unique, constant values. With
 # 參考：
 1. https://www.python.org/dev/peps/pep-0435/#id13
 2. https://docs.python.org/3/library/enum.html
-3. https://ithelp.ithome.com.tw/articles/10029111
-4. https://bit.ly/2SMBFSI
+3. https://stackoverflow.com/questions/37601644/python-whats-the-enum-type-good-for
+4. https://ithelp.ithome.com.tw/articles/10029111
+5. https://bit.ly/2SMBFSI
