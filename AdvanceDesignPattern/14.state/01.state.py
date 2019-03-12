@@ -39,3 +39,50 @@ class Process:
     @after('swap_wait')
     def swap_wait_info(self):
         print('{} is swapped out and waiting'.format(self.name))
+
+    @after('swap_block')
+    def swap_block_info(self):
+        print('{} is swapped out and blocked'.format(self.name))
+
+def transition(process, event, event_name):
+    try:
+        event()
+    except InvalidStateTransition as err:
+        print('Error: transition of {} from {} to {} failed'.format(process.name, process.current_state, event_name))
+
+def state_info(process):
+    print('state of {}: {}'.format(process.name, process.current_state))
+
+def main():
+    RUNNING = 'running'
+    WAITING = 'waiting'
+    BLOCKED = 'blocked'
+    TERMINATED = 'terminated'
+
+    p1, p2 = Process('process1'), Process('process2')
+    [state_info(p) for p in (p1, p2)]
+
+    print()
+    transition(p1, p1.wait, WAITING)
+    transition(p2, p2.terminate, TERMINATED)
+    [state_info(p) for p in (p1, p2)]
+
+    print()
+    transition(p1, p1.run, RUNNING)
+    transition(p2, p2.wait, WAITING)
+    [state_info(p) for p in (p1, p2)]
+
+    print()
+    transition(p2, p2.run, RUNNING)
+    [state_info(p) for p in (p1, p2)]
+
+    print()
+    [transition(p, p.block, BLOCKED) for p in (p1, p2)]
+    [state_info(p) for p in (p1, p2)]
+
+    print()
+    [transition(p, p.terminate, TERMINATED) for p in (p1, p2)]
+    [state_info(p) for p in (p1, p2)]
+
+if __name__ == "__main__":
+    main()
