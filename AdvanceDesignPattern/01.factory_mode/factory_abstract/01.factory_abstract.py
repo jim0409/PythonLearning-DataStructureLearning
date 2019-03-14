@@ -1,3 +1,5 @@
+
+# ---------------------define the FrogWorld with character Frog() and obstacle Bug()
 class Frog:
     def __init__(self, name):
         self.name = name
@@ -28,6 +30,8 @@ class FrogWorld:
     
     def make_obstacle(self):
         return Bug()
+
+# ---------------------define the WizardWorld with character Wizard() and obstacle Ork()
 
 class Wizard:
     def __init__(self, name):
@@ -60,6 +64,8 @@ class WizardWorld:
     def make_obstacle(self):
         return Ork()
 
+# ---------------------define a env to create the relative story via user conditions
+
 class GameEnvironment:
     def __init__(self, factory):
         self.hero = factory.make_character()
@@ -78,6 +84,8 @@ def validate_age(name):
         return False, age
         
     return True, age
+
+# ---define main process
 
 def main():
     name = input("Hello. What's your name? ")
