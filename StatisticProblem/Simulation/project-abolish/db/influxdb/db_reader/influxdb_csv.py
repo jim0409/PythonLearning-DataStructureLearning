@@ -1,1 +1,0 @@
-# assume to output db data to csv
