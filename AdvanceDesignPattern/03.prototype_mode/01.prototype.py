@@ -7,6 +7,15 @@ class Book:
         self.name = name
         self.authors = authors
         self.price = price # unit: dollors
+        # print("before")
+        # print("the self dict is {}".format(self.__dir__))
+        # for i in self.__dict__:
+        #     print(i)
+        # '''
+        # name
+        # authors
+        # price
+        # '''
         self.__dict__.update(rest)
 
     def __str__(self):
@@ -17,6 +26,11 @@ class Book:
             if i == 'price':
                 mylist.append('$')
             mylist.append('\n')
+            print("--------{}--------".format(mylist))
+        # print("after")
+        # print("the self dict is {}".format(self.__dir__))
+        # for i in self.__dict__:
+        #     print(i)
         return ''.join(mylist)
 
 class Prototype:

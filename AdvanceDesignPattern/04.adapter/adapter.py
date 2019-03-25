@@ -20,6 +20,8 @@ class Adapter:
 
 def main():
     objects = [Computer('Asus')]
+    # # objects is a list, and a receiver for Adapter
+    # print(type(objects))
     synth = Synthesizer('moog')
     objects.append(Adapter(synth, dict(execute=synth.play)))
     human = Human('Bob')
@@ -27,6 +29,11 @@ def main():
 
     for i in objects:
         print('{} {}'.format(str(i), i.execute()))
+        # try:
+        #     print('{} {}'.format(str(i), i.name()))
+        # except ValueError as e:
+        #     print('{} {}'.format(str(i), e))
+        
 
 if __name__ == "__main__":
     main()
