@@ -1,5 +1,6 @@
 from pyparsing import Word, OneOrMore, Optional, Group, Suppress, alphanums
 
+
 class Gate:
     def __init__(self):
         self.is_open = False
@@ -14,6 +15,7 @@ class Gate:
     def close(self):
         print('closing the gate')
         self.is_open = False
+
 
 class Garage:
     def __init__(self):
@@ -30,6 +32,7 @@ class Garage:
         print('closing the garage')
         self.is_open = False
 
+
 class Aircondition:
     def __init__(self):
         self.is_on = False
@@ -44,6 +47,7 @@ class Aircondition:
     def turn_off(self):
         print('turning off the aircondition')
         self.is_on = False
+
 
 class Heating:
     def __init__(self):
@@ -60,6 +64,7 @@ class Heating:
         print('turning off the heating')
         self.is_on = False
 
+
 class Boiler:
     def __init__(self):
         self.temperature = 83
@@ -75,6 +80,7 @@ class Boiler:
         print('decreasing the boiler temperature by {} defrees'.format(amount))
         self.temperature -= amount
 
+
 class Fridge:
     def __init__(self):
         self.temperature = 2
@@ -89,6 +95,7 @@ class Fridge:
     def decrease_temperature(self, amount):
         print('decreasing the fridge temperature by {} defrees'.format(amount))
         self.temperature -= amount
+
 
 def main():
     word = Word(alphanums)
@@ -106,20 +113,20 @@ def main():
     fridge = Fridge()
 
     tests = ('open -> gate',
-            'close -> garage',
-            'turn on -> aircondition',
-            'turn off -> heating',
-            'increase -> boiler temperature -> 5 degrees',
-            'decrease -> fridge temperature -> 2 degrees')
+             'close -> garage',
+             'turn on -> aircondition',
+             'turn off -> heating',
+             'increase -> boiler temperature -> 5 degrees',
+             'decrease -> fridge temperature -> 2 degrees')
 
-    open_actions = {'gate':gate.open, 'garage':garage.open,
-                    'aircondition':airco.turn_on, 'heating':heating.turn_on,
-                    'boiler temperature':boiler.increase_temperature,
-                    'fridge temperature':fridge.increase_temperature}
-    close_actions = {'gate':gate.close, 'garage':garage.close,
-                    'aircondition':airco.turn_off, 'heating':heating.turn_off,
-                    'boiler temperature':boiler.decrease_temperature,
-                    'fridge temperature':fridge.decrease_temperature}
+    open_actions = {'gate': gate.open, 'garage': garage.open,
+                    'aircondition': airco.turn_on, 'heating': heating.turn_on,
+                    'boiler temperature': boiler.increase_temperature,
+                    'fridge temperature': fridge.increase_temperature}
+    close_actions = {'gate': gate.close, 'garage': garage.close,
+                     'aircondition': airco.turn_off, 'heating': heating.turn_off,
+                     'boiler temperature': boiler.decrease_temperature,
+                     'fridge temperature': fridge.decrease_temperature}
 
     for t in tests:
         if len(event.parseString(t)) == 2:
@@ -132,7 +139,8 @@ def main():
 
         elif len(event.parseString(t)) == 3:
             cmd, dev, arg = event.parseString(t)
-            cmd_str, dev_str, arg_str = ''.join(cmd), ''.join(dev), ''.join(arg)
+            cmd_str, dev_str, arg_str = ''.join(
+                cmd), ''.join(dev), ''.join(arg)
             num_arg = 0
             try:
                 num_arg = int(arg_str.split()[0])
@@ -142,6 +150,7 @@ def main():
                 open_actions[dev_str](num_arg)
             elif 'decrease' in cmd_str and num_arg > 0:
                 close_actions[dev_str](num_arg)
+
 
 if __name__ == '__main__':
     main()

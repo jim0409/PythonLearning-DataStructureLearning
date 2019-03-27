@@ -3,10 +3,12 @@ import time
 
 PizzaProgress = Enum('PizzaProgress', 'queued preparation baking ready')
 PizzaDough = Enum('PizzaDough', 'thin thick')
-PizzaSauce = Enum('PizzaSauce', 'tomato creme_fraiche') 
-PizzaTopping = Enum('PizzaTopping', 'mozzarella double_mozzrella bacon ham mushrooms red_onion oregano')
+PizzaSauce = Enum('PizzaSauce', 'tomato creme_fraiche')
+PizzaTopping = Enum(
+    'PizzaTopping', 'mozzarella double_mozzrella bacon ham mushrooms red_onion oregano')
 
 STEP_DELAY = 3
+
 
 class Pizza:
     def __init__(self, name):
@@ -24,6 +26,7 @@ class Pizza:
         time.sleep(STEP_DELAY)
         print('done with the {} dough'.format(self.dough.name))
 
+
 class MargaritaBuilder:
     def __init__(self):
         self.pizza = Pizza('margarita')
@@ -39,10 +42,11 @@ class MargaritaBuilder:
         self.pizza.sauce = PizzaSauce.tomato
         time.sleep(STEP_DELAY)
         print('done with the tomato sauce')
-    
+
     def add_topping(self):
         print('adding the topping (double mozzarella, oregano) to your margarita')
-        self.pizza.topping.append([i for i in (PizzaTopping.double_mozzrella, PizzaTopping.oregano)])
+        self.pizza.topping.append(
+            [i for i in (PizzaTopping.double_mozzrella, PizzaTopping.oregano)])
         time.sleep(STEP_DELAY)
         print('done with the tomato sauce')
 
@@ -53,16 +57,17 @@ class MargaritaBuilder:
         self.progress = PizzaProgress.ready
         print('your margarita is ready')
 
+
 class CreamyBaconBuilder:
     def __init__(self):
         self.pizza = Pizza('creamy bacon')
         self.progress = PizzaProgress.queued
         self.baking_time = 7
-    
+
     def prepare_dough(self):
         self.progress = PizzaProgress.preparation
         self.pizza.prepare_dough(PizzaDough.thick)
-    
+
     def add_sauce(self):
         print('adding the creme fraiche sauce to your creamy bacon')
 
@@ -74,40 +79,46 @@ class CreamyBaconBuilder:
     def add_topping(self):
         print('adding the topping (mozzarella, bacon, ham, mushrooms, red onion, oregano) to your creamy bacon')
         self.pizza.topping.append([t for t in (PizzaTopping.mozzarella, PizzaTopping.bacon,
-                                       PizzaTopping.ham, PizzaTopping.mushrooms,
-                                       PizzaTopping.red_onion, PizzaTopping.oregano)])
+                                               PizzaTopping.ham, PizzaTopping.mushrooms,
+                                               PizzaTopping.red_onion, PizzaTopping.oregano)])
         time.sleep(STEP_DELAY)
-        print('done with the topping (mozzarella, bacon, ham, mushrooms, red onion, oregano)')
-    
+        print(
+            'done with the topping (mozzarella, bacon, ham, mushrooms, red onion, oregano)')
+
     def bake(self):
         self.progress = PizzaProgress.baking
         print('baking your creamy bacon for {} seconds'.format(self.baking_time))
         time.sleep(self.baking_time)
         self.progress = PizzaProgress.ready
         print('your creamy bacon is ready')
-    
+
+
 class Waiter:
     def __init__(self):
         self.builder = None
-        
+
     def construct_pizza(self, builder):
         self.builder = builder
-        [step() for step in (builder.prepare_dough, builder.add_sauce, builder.add_topping, builder.bake)]
-        
+        [step() for step in (builder.prepare_dough,
+                             builder.add_sauce, builder.add_topping, builder.bake)]
+
     @property
     def pizza(self):
         return self.builder.pizza
-        
+
+
 def validate_style(builders):
     try:
-        pizza_style = input('What pizza would you like, [m]argarita or [c]reamy bacon?')
+        pizza_style = input(
+            'What pizza would you like, [m]argarita or [c]reamy bacon?')
         builder = builders[pizza_style]()
         valid_input = True
 
     except KeyError as err:
         print('Sorry, only margarita (key m) and creamy bacon (key c) are available')
-    
+
     return True, builder
+
 
 def main():
     builders = dict(m=MargaritaBuilder, c=CreamyBaconBuilder)
@@ -121,9 +132,6 @@ def main():
     print()
     print('Enjoy your {}!'.format(pizza))
 
+
 if __name__ == "__main__":
     main()
-        
-
-
-

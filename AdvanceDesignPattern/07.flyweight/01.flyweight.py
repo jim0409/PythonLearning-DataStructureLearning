@@ -3,6 +3,7 @@ from enum import Enum
 
 TreeType = Enum('TreeType', 'apple_tree cherry_tree peach_tree')
 
+
 class Tree:
     pool = dict()
 
@@ -13,10 +14,11 @@ class Tree:
             cls.pool[tree_type] = obj
             obj.tree_type = tree_type
         return obj
-    
+
     def render(self, age, x, y):
-        print('render a tree of type {} and age {} at ({}, {})'.format(self.tree_type, age, x, y))
-    
+        print('render a tree of type {} and age {} at ({}, {})'.format(
+            self.tree_type, age, x, y))
+
 
 def main():
     rnd = random.Random()
@@ -44,7 +46,7 @@ def main():
                   rnd.randint(min_point, max_point),
                   rnd.randint(min_point, max_point))
         tree_counter += 1
-    
+
     print('trees rendered: {}'.format(tree_counter))
 
     print('tree actually created: {}'.format(len(Tree.pool)))
@@ -55,6 +57,7 @@ def main():
 
     print('{} == {}? {}'.format(id(t4), id(t5), id(t4) == id(t5)))
     print('{} == {}? {}'.format(id(t5), id(t6), id(t5) == id(t6)))
+
 
 if __name__ == "__main__":
     main()

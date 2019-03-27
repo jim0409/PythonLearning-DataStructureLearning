@@ -2,8 +2,9 @@ import os
 
 verbose = True
 
+
 class RenameFile:
-    def __init__(self,path_src, path_dest ):
+    def __init__(self, path_src, path_dest):
         self.src, self.dest = path_src, path_dest
 
     def execute(self):
@@ -13,8 +14,9 @@ class RenameFile:
 
     def undo(self):
         if verbose:
-           print("[renaming '{}' back to '{}']".format(self.dest, self.src))
+            print("[renaming '{}' back to '{}']".format(self.dest, self.src))
         os.rename(self.dest, self.src)
+
 
 class CreateFile:
     def __init__(self, path, txt='hello world\n'):
@@ -29,6 +31,7 @@ class CreateFile:
     def undo(self):
         delete_file(self.path)
 
+
 class ReadFile:
     def __init__(self, path):
         self.path = path
@@ -39,10 +42,12 @@ class ReadFile:
         with open(self.path, mode='r', encoding='utf-8') as in_file:
             print(in_file.read(), end='')
 
+
 def delete_file(path):
     if verbose:
         print("deleting file '{}'".format(path))
     os.remove(path)
+
 
 def main():
     orig_name, new_name = 'file1', 'file2'
@@ -64,6 +69,7 @@ def main():
             c.undo()
         except AttributeError as e:
             pass
+
 
 if __name__ == '__main__':
     main()

@@ -5,6 +5,7 @@ class Event:
     def __str__(self):
         return self.name
 
+
 class Widget:
     def __init__(self, parent=None):
         self.parent = parent
@@ -20,6 +21,7 @@ class Widget:
         elif hasattr(self, 'handle_default'):
             self.handle_default(event)
 
+
 class MainWindow(Widget):
     def handle_close(self, event):
         print('MainWindow: {}'.format(event))
@@ -27,13 +29,16 @@ class MainWindow(Widget):
     def handle_default(self, event):
         print('MainWindow Default: {}'.format(event))
 
+
 class SendDialog(Widget):
     def handle_paint(self, event):
         print('SendDialog: {}'.format(event))
 
+
 class MsgText(Widget):
     def handle_down(self, event):
         print('MsgText: {}'.format(event))
+
 
 def main():
     mw = MainWindow()
@@ -48,6 +53,7 @@ def main():
         sd.handle(evt)
         print('Seding event -{}- to MsgText'.format(evt))
         msg.handle(evt)
+
 
 if __name__ == '__main__':
     main()

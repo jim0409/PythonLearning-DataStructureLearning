@@ -11,6 +11,7 @@ class Computer:
                 'Graphics Card: {}'.format(self.gpu))
         return '\n'.join(info)
 
+
 class ComputerBuilder:
     def __init__(self):
         self.computer = Computer('AG23385193')
@@ -23,6 +24,7 @@ class ComputerBuilder:
 
     def configure_gpu(self, gpu_model):
         self.computer.gpu = gpu_model
+
 
 class HardwareEngineer:
     def __init__(self):
@@ -39,11 +41,13 @@ class HardwareEngineer:
     def computer(self):
         return self.builder.computer
 
+
 def main():
     engineer = HardwareEngineer()
     engineer.construct_computer(hdd=500, memory=8, gpu='Nvidia 1050Ti')
     computer = engineer.computer
     print(computer)
+
 
 if __name__ == '__main__':
     main()

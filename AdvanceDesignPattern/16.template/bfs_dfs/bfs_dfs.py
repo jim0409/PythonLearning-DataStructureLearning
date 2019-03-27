@@ -16,6 +16,7 @@ def bfs(graph, start, end):
 
 # ----
 
+
 def dfs(graph, start, end):
     path = []
     visited = [start]
@@ -33,6 +34,8 @@ def dfs(graph, start, end):
     return (False, path)
 
 # ----
+
+
 def main():
     graph = {
         'Frankfurt': ['Mannheim', 'Wurzburg', 'Kassel'],
@@ -48,14 +51,19 @@ def main():
     }
     bfs_path = bfs(graph, 'Frankfurt', 'Nurnberg')
     dfs_path = bfs(graph, 'Frankfurt', 'Nurnberg')
-    print('bfs Frankfurt-Nurnberg: {}'.format(bfs_path[1] if bfs_path[0] else 'Not found'))
-    print('dfs Frankfurt-Nurnberg: {}'.format(dfs_path[1] if dfs_path[0] else 'Not found'))
+    print(
+        'bfs Frankfurt-Nurnberg: {}'.format(bfs_path[1] if bfs_path[0] else 'Not found'))
+    print(
+        'dfs Frankfurt-Nurnberg: {}'.format(dfs_path[1] if dfs_path[0] else 'Not found'))
 
     bfs_nopath = bfs(graph, 'Wurzburg', 'Kassel')
-    print('bfs Wurzburg-Kassel: {}'.format(bfs_nopath[1] if bfs_nopath[0] else 'Not found'))
+    print(
+        'bfs Wurzburg-Kassel: {}'.format(bfs_nopath[1] if bfs_nopath[0] else 'Not found'))
 
     dfs_nopath = dfs(graph, 'Wurzburg', 'Kassel')
-    print('dfs Wurzburg-Kassel: {}'.format(dfs_nopath[1] if dfs_nopath[0] else 'Not found'))
+    print(
+        'dfs Wurzburg-Kassel: {}'.format(dfs_nopath[1] if dfs_nopath[0] else 'Not found'))
+
 
 if __name__ == "__main__":
     main()

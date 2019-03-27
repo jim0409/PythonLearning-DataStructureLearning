@@ -8,6 +8,7 @@ class Synthesizer:
     def play(self):
         return 'is playing an electronic song'
 
+
 class Human:
     def __init__(self, name):
         self.name = name
@@ -17,4 +18,3 @@ class Human:
 
     def speak(self):
         return 'say hello'
-

@@ -1,12 +1,13 @@
 import copy
 from collections import OrderedDict
 
+
 class Book:
     def __init__(self, name, authors, price, **rest):
         '''other parameters might be : publisher, length, labels, publication_date'''
         self.name = name
         self.authors = authors
-        self.price = price # unit: dollors
+        self.price = price  # unit: dollors
         # print("before")
         # print("the self dict is {}".format(self.__dir__))
         # for i in self.__dict__:
@@ -33,6 +34,7 @@ class Book:
         #     print(i)
         return ''.join(mylist)
 
+
 class Prototype:
     def __init__(self):
         self.objects = dict()
@@ -46,24 +48,27 @@ class Prototype:
     def clone(self, identifier, **attr):
         found = self.objects[identifier]
         if not found:
-            raise ValueError('Incorrect object identifier: {}'.format(identifier))
+            raise ValueError(
+                'Incorrect object identifier: {}'.format(identifier))
         obj = copy.deepcopy(found)
         obj.__dict__.update(attr)
         return obj
 
+
 def main():
     b1 = Book('The C Programming Language',
-            ('Brian W. Kernighan', 'Dennis M.Ritchie'),
-            price=118, publisher='Prentice Hall', length=228, publication_date='1987-02-22',
-            tags=('C', 'programming', 'algorithms', 'data structures'))
+              ('Brian W. Kernighan', 'Dennis M.Ritchie'),
+              price=118, publisher='Prentice Hall', length=228, publication_date='1987-02-22',
+              tags=('C', 'programming', 'algorithms', 'data structures'))
     prototype = Prototype()
     cid = 'k&r-first'
     prototype.register(cid, b1)
     b2 = prototype.clone(cid, name='The C Programming Language(ANSI)',
-                        price = 48.99, length=274, publication_date='1988-04-01', edition=2)
-    for i in (b1,b2):
+                         price=48.99, length=274, publication_date='1988-04-01', edition=2)
+    for i in (b1, b2):
         print(i)
     print('ID b1 : {} != ID b2 : {}'.format(id(b1), id(b2)))
+
 
 if __name__ == "__main__":
     main()

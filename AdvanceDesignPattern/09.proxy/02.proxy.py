@@ -3,14 +3,17 @@ class SensitiveInfo:
         self.users = ['nick', 'tom', 'ben', 'mike']
 
     def read(self):
-        print('There are {} users: {}'.format(len(self.users), '/'.join(self.users)))
+        print('There are {} users: {}'.format(
+            len(self.users), '/'.join(self.users)))
 
     def add(self, user):
         self.users.append(user)
         print('Added user {}'.format(user))
 
+
 class Info:
     '''Proxy SensitiveInfo'''
+
     def __init__(self):
         self.protected = SensitiveInfo()
         self.secret = 'SuperSecret'
@@ -20,7 +23,9 @@ class Info:
 
     def add(self, user):
         sec = input('wht is the secret?')
-        self.protected.add(user) if sec == self.secret else print('That is wrong!')
+        self.protected.add(user) if sec == self.secret else print(
+            'That is wrong!')
+
 
 def main():
     info = Info()
@@ -36,6 +41,7 @@ def main():
             exit()
         else:
             print('unknown option: {}'.format(key))
+
 
 if __name__ == '__main__':
     main()

@@ -1,5 +1,6 @@
 from external import Synthesizer, Human
 
+
 class Computer:
     def __init__(self, name):
         self.name = name
@@ -10,6 +11,7 @@ class Computer:
     def execute(self):
         return 'execute a program'
 
+
 class Adapter:
     def __init__(self, obj, adapted_methods):
         self.obj = obj
@@ -17,6 +19,7 @@ class Adapter:
 
     def __str__(self):
         return str(self.obj)
+
 
 def main():
     objects = [Computer('Asus')]
@@ -33,7 +36,7 @@ def main():
         #     print('{} {}'.format(str(i), i.name()))
         # except ValueError as e:
         #     print('{} {}'.format(str(i), e))
-        
+
 
 if __name__ == "__main__":
     main()

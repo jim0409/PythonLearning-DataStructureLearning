@@ -1,4 +1,5 @@
-known = {0:0, 1:1}
+known = {0: 0, 1: 1}
+
 
 def fibonacci(n):
     assert(n >= 0), 'n must be >= 0'
@@ -7,6 +8,7 @@ def fibonacci(n):
     res = fibonacci(n-1) + fibonacci(n-2)
     known[n] = res
     return res
+
 
 if __name__ == "__main__":
     from timeit import Timer

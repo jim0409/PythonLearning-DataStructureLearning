@@ -1,5 +1,6 @@
 from state_machine import State, Event, acts_as_state_machine, after, before, InvalidStateTransition
 
+
 @acts_as_state_machine
 class Process:
     created = State(initial=True)
@@ -10,7 +11,8 @@ class Process:
     swapped_out_waiting = State()
     swapped_out_blocked = State()
 
-    wait = Event(from_states=(created, running, blocked, swapped_out_waiting), to_state=waiting)
+    wait = Event(from_states=(created, running, blocked,
+                              swapped_out_waiting), to_state=waiting)
     run = Event(from_states=waiting, to_state=running)
     terminate = Event(from_states=running, to_state=terminated)
     block = Event(from_states=(running, swapped_out_blocked), to_state=blocked)
@@ -44,14 +46,18 @@ class Process:
     def swap_block_info(self):
         print('{} is swapped out and blocked'.format(self.name))
 
+
 def transition(process, event, event_name):
     try:
         event()
     except InvalidStateTransition as err:
-        print('Error: transition of {} from {} to {} failed'.format(process.name, process.current_state, event_name))
+        print('Error: transition of {} from {} to {} failed'.format(
+            process.name, process.current_state, event_name))
+
 
 def state_info(process):
     print('state of {}: {}'.format(process.name, process.current_state))
+
 
 def main():
     RUNNING = 'running'
@@ -83,6 +89,7 @@ def main():
     print()
     [transition(p, p.terminate, TERMINATED) for p in (p1, p2)]
     [state_info(p) for p in (p1, p2)]
+
 
 if __name__ == "__main__":
     main()

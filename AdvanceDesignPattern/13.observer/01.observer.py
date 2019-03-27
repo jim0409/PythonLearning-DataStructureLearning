@@ -17,6 +17,7 @@ class Publisher:
     def notify(self):
         [o.notify(self) for o in self.observers]
 
+
 class DefaultFormatter(Publisher):
     def __init__(self, name):
         Publisher.__init__(self)
@@ -39,13 +40,18 @@ class DefaultFormatter(Publisher):
         else:
             self.notify()
 
+
 class HexFormatter:
     def notify(self, publisher):
-        print("{}: '{}' has now hex data = {}".format(type(self).__name__, publisher.name, hex(publisher.data)))
+        print("{}: '{}' has now hex data = {}".format(
+            type(self).__name__, publisher.name, hex(publisher.data)))
+
 
 class BinaryFormatter:
     def notify(self, publisher):
-        print("{}: '{}' has now bin data = {}".format(type(self).__name__, publisher.name, bin(publisher.data)))
+        print("{}: '{}' has now bin data = {}".format(
+            type(self).__name__, publisher.name, bin(publisher.data)))
+
 
 def main():
     df = DefaultFormatter('test1')
@@ -73,6 +79,7 @@ def main():
     print()
     df.data = 15.8
     print(df)
+
 
 if __name__ == '__main__':
     main()

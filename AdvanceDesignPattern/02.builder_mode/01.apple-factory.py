@@ -1,7 +1,8 @@
-MINI14='1.4GHz Mac mini'
+MINI14 = '1.4GHz Mac mini'
+
 
 class AppleFactory:
-    class  MacMin14:
+    class MacMin14:
         def __init__(self):
             self.memory = 4
             self.hdd = 500
@@ -19,6 +20,7 @@ class AppleFactory:
             return self.MacMin14()
         else:
             print('I do not know how to build {}'.format(model))
+
 
 if __name__ == '__main__':
     afac = AppleFactory()
