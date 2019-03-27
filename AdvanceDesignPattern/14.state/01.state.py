@@ -11,8 +11,9 @@ class Process:
     swapped_out_waiting = State()
     swapped_out_blocked = State()
 
-    wait = Event(from_states=(created, running, blocked,
-                              swapped_out_waiting), to_state=waiting)
+    wait = Event(
+        from_states=(created, running, blocked, swapped_out_waiting),
+        to_state=waiting)
     run = Event(from_states=waiting, to_state=running)
     terminate = Event(from_states=running, to_state=terminated)
     block = Event(from_states=(running, swapped_out_blocked), to_state=blocked)
@@ -51,8 +52,8 @@ def transition(process, event, event_name):
     try:
         event()
     except InvalidStateTransition as err:
-        print('Error: transition of {} from {} to {} failed'.format(
-            process.name, process.current_state, event_name))
+        print('Error: transition of {} from {} to {} failed with error'.format(
+            process.name, process.current_state, event_name, err))
 
 
 def state_info(process):

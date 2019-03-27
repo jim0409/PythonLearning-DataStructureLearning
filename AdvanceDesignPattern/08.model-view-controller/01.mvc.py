@@ -11,6 +11,7 @@ class QuoteModel:
         try:
             value = quotes[n]
         except IndexError as err:
+            print("error happened with {}".format(err))
             value = 'Not Found!'
 
         return value
@@ -40,7 +41,7 @@ class QuoteTerminalController:
                 n = int(n)
                 valid_input = True
             except ValueError as err:
-                self.view.error("Incorrect index '{}'".format(n))
+                self.view.error("Incorrect index '{}' with error {}".format(n, err))
         quote = self.model.get_quote(n)
         self.view.show(quote)
 

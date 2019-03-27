@@ -112,10 +112,11 @@ def validate_style(builders):
         pizza_style = input(
             'What pizza would you like, [m]argarita or [c]reamy bacon?')
         builder = builders[pizza_style]()
-        valid_input = True
+        # valid_input = True
 
     except KeyError as err:
         print('Sorry, only margarita (key m) and creamy bacon (key c) are available')
+        print("return error with error {}".format(err))
 
     return True, builder
 

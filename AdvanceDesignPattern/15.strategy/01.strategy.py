@@ -9,7 +9,7 @@ WARNING = 'too bad, you picked the slow algorithm :('
 def pairs(seq):
     n = len(seq)
     for i in range(n):
-        yield seq[i], seq[(i+1) % n]
+        yield seq[i], seq[(i + 1) % n]
 
 
 def allUniqueSort(s):
@@ -54,10 +54,10 @@ def main():
 
             try:
                 strategy = strategies[strategy_picked]
-                print('allUnique({}): {}'.format(
-                    word, allUnique(word, strategy)))
+                print('allUnique({}): {}'.format(word, allUnique(
+                    word, strategy)))
             except KeyError as err:
-                print('Incorrect option: {}'.format(strategy_picked))
+                print('Incorrect option: {} {}'.format(strategy_picked, err))
 
 
 if __name__ == "__main__":

@@ -25,7 +25,8 @@ class DefaultFormatter(Publisher):
         self._data = 0
 
     def __str__(self):
-        return "{}: '{}' has data = {}".format(type(self).__name__, self.name, self._data)
+        return "{}: '{}' has data = {}".format(
+            type(self).__name__, self.name, self._data)
 
     @property
     def data(self):

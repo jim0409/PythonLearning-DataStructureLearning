@@ -112,21 +112,27 @@ def main():
     boiler = Boiler()
     fridge = Fridge()
 
-    tests = ('open -> gate',
-             'close -> garage',
-             'turn on -> aircondition',
+    tests = ('open -> gate', 'close -> garage', 'turn on -> aircondition',
              'turn off -> heating',
              'increase -> boiler temperature -> 5 degrees',
              'decrease -> fridge temperature -> 2 degrees')
 
-    open_actions = {'gate': gate.open, 'garage': garage.open,
-                    'aircondition': airco.turn_on, 'heating': heating.turn_on,
-                    'boiler temperature': boiler.increase_temperature,
-                    'fridge temperature': fridge.increase_temperature}
-    close_actions = {'gate': gate.close, 'garage': garage.close,
-                     'aircondition': airco.turn_off, 'heating': heating.turn_off,
-                     'boiler temperature': boiler.decrease_temperature,
-                     'fridge temperature': fridge.decrease_temperature}
+    open_actions = {
+        'gate': gate.open,
+        'garage': garage.open,
+        'aircondition': airco.turn_on,
+        'heating': heating.turn_on,
+        'boiler temperature': boiler.increase_temperature,
+        'fridge temperature': fridge.increase_temperature
+    }
+    close_actions = {
+        'gate': gate.close,
+        'garage': garage.close,
+        'aircondition': airco.turn_off,
+        'heating': heating.turn_off,
+        'boiler temperature': boiler.decrease_temperature,
+        'fridge temperature': fridge.decrease_temperature
+    }
 
     for t in tests:
         if len(event.parseString(t)) == 2:
@@ -139,13 +145,13 @@ def main():
 
         elif len(event.parseString(t)) == 3:
             cmd, dev, arg = event.parseString(t)
-            cmd_str, dev_str, arg_str = ''.join(
-                cmd), ''.join(dev), ''.join(arg)
+            cmd_str, dev_str, arg_str = ''.join(cmd), ''.join(dev), ''.join(
+                arg)
             num_arg = 0
             try:
                 num_arg = int(arg_str.split()[0])
             except ValueError as err:
-                print("expected number but got: '{}'".format(arg_str[0]))
+                print("expected number but got: '{}' with err".format(arg_str[0], err))
             if 'increase' in cmd_str and num_arg > 0:
                 open_actions[dev_str](num_arg)
             elif 'decrease' in cmd_str and num_arg > 0:

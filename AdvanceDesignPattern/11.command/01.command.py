@@ -53,7 +53,8 @@ def main():
     orig_name, new_name = 'file1', 'file2'
 
     commands = []
-    for cmd in CreateFile(orig_name), ReadFile(orig_name), RenameFile(orig_name, new_name):
+    for cmd in CreateFile(orig_name), ReadFile(orig_name), RenameFile(
+            orig_name, new_name):
         commands.append(cmd)
 
     [c.execute() for c in commands]
@@ -68,7 +69,7 @@ def main():
         try:
             c.undo()
         except AttributeError as e:
-            pass
+            print("error happened with {}".format(e))
 
 
 if __name__ == '__main__':

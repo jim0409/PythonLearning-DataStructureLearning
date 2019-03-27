@@ -1,4 +1,3 @@
-
 # ---------------------define the FrogWorld with character Frog() and obstacle Bug()
 
 
@@ -21,8 +20,8 @@ class Bug:
     def action(self):
         return 'eats it'
 
-        class FrogWorld:
 
+class FrogWorld:
     def __init__(self, name):
         print(self)
         self.player_name = name
@@ -35,6 +34,7 @@ class Bug:
 
     def make_obstacle(self):
         return Bug()
+
 
 # ---------------------define the WizardWorld with character Wizard() and obstacle Ork()
 
@@ -73,6 +73,7 @@ class WizardWorld:
     def make_obstacle(self):
         return Ork()
 
+
 # ---------------------define a env to create the relative story via user conditions
 
 
@@ -91,10 +92,11 @@ def validate_age(name):
         age = int(age)
 
     except ValueError as err:
-        print('Age {} is invalid, please try again ...'.format(age))
+        print('Age {} is invalid, please try again ... with error {}'.format(age, err))
         return False, age
 
     return True, age
+
 
 # ---define main process
 
