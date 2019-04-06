@@ -105,4 +105,5 @@ def main():
 			ptr = ptr.next
 
 
-main()
+if __name__ == "__main__":
+	main()
