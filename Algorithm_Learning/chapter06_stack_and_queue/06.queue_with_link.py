@@ -32,6 +32,7 @@ def dequeue():  # pop out the queue data
     global rear
     if front == None:
         print('the queue is empty!')
+        rear = None
 
     else:
         print('name %s\tgrade %d\t' % (front.name, front.score))
@@ -44,6 +45,7 @@ def show():  # display the queue data
     ptr = front
     if ptr == None:
         print('the queue is empty!')
+        rear = None
 
     else:
         while ptr != None:  # check queue from front to rear
