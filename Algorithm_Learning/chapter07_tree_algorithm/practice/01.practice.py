@@ -5,7 +5,6 @@ def Btree_create(btree_deep, data):
         while btree[level] is not 0:
             if data[i] > btree[level]:  # if the max value is inside the tree, compare them with child tree
                 level = level * 2 + 1
-
             else:
                 level = level * 2
 

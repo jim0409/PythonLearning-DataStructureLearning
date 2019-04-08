@@ -83,9 +83,9 @@ while True:
 
     elif ch == 'd':
         temp = dequeue(1)
-        print('the double queue fromt fornt is : %d ' % temp)
+        print('the double queue from fornt is : %d ' % temp)
         temp = dequeue(2)
-        print('the double queue fromt rear is : %d ' % temp)
+        print('the double queue from rear is : %d ' % temp)
 
     else:
         break

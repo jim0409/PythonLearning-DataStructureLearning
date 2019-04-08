@@ -45,7 +45,7 @@ def show():
     
     else:
         while ptr != None:
-            print('name {} grade {}'.format(ptr.name, ptr.score))
+            print('name {} score {}'.format(ptr.name, ptr.score))
             ptr = ptr.next
 
 choice=''
