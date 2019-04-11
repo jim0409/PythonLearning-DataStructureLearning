@@ -47,14 +47,19 @@ def dequeue(action):
     # retrieve data from bottom
     elif rear is not None and action == 2:
         startNode = front  # record the value of front
-        value = rear.data  # retrieve the data from bottom
+        value = rear.data  # pre-define the value is refer to the rear.data and retrieve the data from bottom
 
         # looking for the penultimate value from the bottom of Node
         tempNode = front
-        while front.next != rear and front.next != None:
-            front = front.next
-            tempNode = front
-        front = startNode  # record the front point from bottom of queue
+        
+        while startNode.next != rear and startNode.next != None:
+            startNode = startNode.next
+            tempNode = startNode
+
+        # while front.next != rear and front.next != None:
+        #     front = front.next
+        #     tempNode = front
+        # front = startNode  # record the front point from bottom of queue
         rear = tempNode  # record the bottom point from bottom of queue
 
         # while the next line is the bottom of the whole queue
