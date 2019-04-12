@@ -17,12 +17,20 @@ def enqueue(name, score):
     new_data = student()  # allocate memory for new element
     new_data.name = name
     new_data.score = score
+
+    # 處理front邏輯 front.next .next .next ...
     if rear == None:  # if rear is None means it is the first element
         front = new_data
 
     else:
+        # 因為原本的front跟rear是同一個點，所以front.next=rear.next
+        # 如果rear.next=new_data表示front.next = new_data
+        # 以此為例，
+        # 增加新的節點時，rear.next(此時已經是front.next.next) = new_data
+        # 表示front.next.next = new_data
         rear.next = new_data  # put new element into tail of the stack
 
+    # 處理rear邏輯，rear為最後一筆值
     rear = new_data  # put rear to the new element whereas the tail of the stack
     new_data.next = None  # no more new element after
 
