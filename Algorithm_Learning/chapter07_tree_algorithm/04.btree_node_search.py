@@ -32,23 +32,36 @@ def create_tree(root, val):  # claim a binary tree create func
 
     return root
 
-
-def search(ptr, val):  # search btree subprocess
-    i = 1
-    while True:
-        if ptr is None:  # return None if doesn't find
-            return None
-
-        if ptr.data == val:  # node value equal to the searching value
-            print('take %3d times to search' % i)
-            return ptr
-
-        elif ptr.data > val:  # node value is bigger than search value
-            ptr = ptr.left
-
+# 改寫search
+def search(ptr, val):
+    ptr_r = ptr
+    while ptr_r is not None:
+        if ptr_r.data == val:
+            print('success find the value {}'.format(val))
+            return ptr_r
         else:
-            ptr = ptr.right
-        i += 1
+            if val > ptr_r.data:
+                ptr_r = ptr_r.right
+            else:
+                ptr_r = ptr_r.left
+                
+
+# def search(ptr, val):  # search btree subprocess
+#     i = 1
+#     while True:
+#         if ptr is None:  # return None if doesn't find
+#             return None
+
+#         if ptr.data == val:  # node value equal to the searching value
+#             print('take %3d times to search' % i)
+#             return ptr
+
+#         elif ptr.data > val:  # node value is bigger than search value
+#             ptr = ptr.left
+
+#         else:
+#             ptr = ptr.right
+#         i += 1
 
 
 # main process
