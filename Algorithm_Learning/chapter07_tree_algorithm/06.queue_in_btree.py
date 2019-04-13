@@ -46,4 +46,6 @@ def main():
         print('[%2d]' % data[i], end='')
     print()
 
-main()
+
+if __name__ == "__main__":
+    main()
