@@ -3,7 +3,7 @@
 
 #ignore folder
 /StatisticProblem/TimeSeries/*
-.idea/*
+.idea
 .vscode
 /TensorflowEx/TestBookExample/youtube/lesson5/tensorboard/logs/*
 /TensorflowEx/TestBookExample/youtube/lesson10/captcha/*
