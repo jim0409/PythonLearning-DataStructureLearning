@@ -23,6 +23,16 @@ def dfs(current):  # deep priority func
 data = [[1, 2], [2, 1], [1, 3], [3, 1], [2, 4], [4, 2], [2, 5], [5, 2], [3, 6], [6, 3], [3, 7], [7, 3], [4, 8], [8, 4],
         [5, 8], [8, 5], [6, 8], [8, 6], [8, 7], [7, 8]]
 
+"""
+1 -- 2 --- 4 --|
+  |     |      |
+  |     -- 5 --|
+  |            8
+  -- 3 --- 6 --| 
+        |      |
+        -- 7 --|
+"""
+
 for i in range(1, 9):  # set 8 top point
     run[i] = 0  # set every point as unreachable
     head[i] = list_node()
@@ -44,8 +54,10 @@ print('the edge queue within the graph:')  # print out the graph within the grap
 for i in range(1, 9):
     ptr = head[i]
     print('top %d =>' % ptr.val, end='')
-    while ptr != None:
-        print('[%d]' % ptr.val, end='')
+    
+    # 不打印出節點，只打印出該節點能夠遍佈的點
+    while ptr.next != None:
+        print('[%d]' % ptr.next.val, end='')
         ptr = ptr.next
     print()
 print('move to top from deep')  # print out the path
