@@ -6,6 +6,8 @@ def memoize(fn):
     @functools.wraps(fn)
     def memoizer(*args):
         if args not in known:
+            print("remember the dict with args {}".format(args, known), end='\t')
+            print("remember the dict with key {}".format(*args, known))
             known[args] = fn(*args)
         return known[args]
 
