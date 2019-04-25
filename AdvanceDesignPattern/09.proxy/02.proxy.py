@@ -22,7 +22,7 @@ class Info:
         self.protected.read()
 
     def add(self, user):
-        sec = input('wht is the secret?')
+        sec = input('What is the secret?')
         self.protected.add(user) if sec == self.secret else print(
             'That is wrong!')
 
