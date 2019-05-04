@@ -51,7 +51,7 @@ def main():
         mw.handle(evt)
         print('Sending event -{}- to SendDialog'.format(evt))
         sd.handle(evt)
-        print('Seding event -{}- to MsgText'.format(evt))
+        print('Sending event -{}- to MsgText'.format(evt))
         msg.handle(evt)
 
 
