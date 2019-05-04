@@ -41,7 +41,9 @@ class ReadFile:
             print("[reading file '{}']".format(self.path))
         with open(self.path, mode='r', encoding='utf-8') as in_file:
             print(in_file.read(), end='')
-
+    
+    def undo(self):
+        enter = input("=====Readfile has no method for undo, press enter to exit====")
 
 def delete_file(path):
     if verbose:
