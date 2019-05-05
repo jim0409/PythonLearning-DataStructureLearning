@@ -25,27 +25,27 @@ class Process:
 
     @after('wait')
     def wait_info(self):
-        print('{} entered waiting mode'.format(self.name))
+        print('exec after_wait {} entered waiting mode'.format(self.name))
 
     @after('run')
     def run_into(self):
-        print('{} is running'.format(self.name))
+        print('exec after_run {} is running'.format(self.name))
 
     @before('terminate')
     def terminate_info(self):
-        print('{} terminated'.format(self.name))
+        print('exec before_terminate {} terminated'.format(self.name))
 
     @after('block')
     def block_info(self):
-        print('{} is blocked'.format(self.name))
+        print('exec after_block {} is blocked'.format(self.name))
 
     @after('swap_wait')
     def swap_wait_info(self):
-        print('{} is swapped out and waiting'.format(self.name))
+        print('exec after_swap_wait {} is swapped out and waiting'.format(self.name))
 
     @after('swap_block')
     def swap_block_info(self):
-        print('{} is swapped out and blocked'.format(self.name))
+        print('exec after_swap_block {} is swapped out and blocked'.format(self.name))
 
 
 def transition(process, event, event_name):
