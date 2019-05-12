@@ -8,12 +8,14 @@ server_sock.bind(('0.0.0.0', 9999))  # 自己可以設定什麼port，這裡我�
 while True:
     server_sock.listen(0)
     client, address = server_sock.accept()
-    print(address, "connected")
-    while True:
-        try:
-            send_data = ",".join(["Hello", "Nice", "To", "meet", "you"])
-            client.send(send_data)
-        except:
-            print(address, 'Closed')
-            break
-        time.sleep(5)
+    print(address, "connected\n")
+    # while True:
+        # try:
+    send_data = "hello nice to meet you\n"
+        # 如果沒有轉send_data為bytes會噴錯，TypeError: a bytes-like object is required, not 'str'
+    client.send(bytes(send_data, 'utf-8'))
+        # time.sleep(5)
+        # client.close()
+    # server_sock.close()
+    client.close()
+    print(address, "closed\n")
