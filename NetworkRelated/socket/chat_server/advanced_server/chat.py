@@ -22,8 +22,10 @@ class Server:
                     continue
                 '''
                 # only send raw bytes
-                if connection is not c:
-                    connection.send(bytes(data))
+                if connection is c:
+                    continue
+                connection.send(bytes(data))
+                
             if not data:
                 print(str(a[0]) + ':' + str(a[1]), "disconnected")
                 self.connections.remove(c)
