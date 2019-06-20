@@ -1,0 +1,13 @@
+version: "2"
+
+networks:
+  proxy-net:
+    driver: bridge
+
+services:
+  upload_server:
+    networks:
+      - proxy-net
+    build: .
+    ports:
+      - "8000:8080"
