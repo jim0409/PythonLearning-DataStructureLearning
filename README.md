@@ -9,3 +9,8 @@ Hello,
 
 ### main 函數從下面開始定義 (備忘)
 if __name__ == '__main__':
+
+
+# refer:
+python install virtualenv ( virtualenv venv)
+- https://reurl.cc/Y1gK1o
