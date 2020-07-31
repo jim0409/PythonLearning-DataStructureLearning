@@ -28,3 +28,5 @@ class WebsiteUser(FastHttpUser):
 
 # headless(no-web)
 # locust -f locustfile.py --host=http://127.0.0.1 --headless -r 1000 -t 10s
+
+# 460~500 request persecond
